@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Anchor, Calendar, MapPin, Phone, Star, Users, BookOpen } from "lucide-react"
+import { Anchor, Calendar, MapPin, Phone, ShoppingBag, BookOpen, LogIn, UserPlus, Star, Users } from "lucide-react"
+import MobileMenu from "@/components/mobile-menu"
 
 import { Button } from "@/components/ui/button"
 import CustomCursor from "@/components/custom-cursor"
@@ -55,15 +56,13 @@ export default function Home() {
             <span className="text-xl font-bold text-white wave-text">Door County Bouncy House</span>
           </Link>
 
-          {/* Creative Navigation Menu */}
+          {/* Desktop Navigation Menu */}
           <nav className="hidden md:flex items-center">
             <div className="flex space-x-1 bg-blue-700/50 backdrop-blur-sm p-1 rounded-full">
               {[
-                { name: "Services", href: "#services", icon: <Star className="h-4 w-4" /> },
-                { name: "Gallery", href: "#gallery", icon: <Users className="h-4 w-4" /> },
-                { name: "Packages", href: "#pricing", icon: <Calendar className="h-4 w-4" /> },
+                { name: "Products", href: "/products", icon: <ShoppingBag className="h-4 w-4" /> },
+                { name: "Blog", href: "/blog", icon: <BookOpen className="h-4 w-4" /> },
                 { name: "Contact", href: "#contact", icon: <Phone className="h-4 w-4" /> },
-                { name: "Blog", href: "#blog", icon: <BookOpen className="h-4 w-4" /> },
               ].map((item, index) => (
                 <Link
                   key={index}
@@ -77,28 +76,21 @@ export default function Home() {
                 </Link>
               ))}
             </div>
+            <div className="flex items-center ml-4 space-x-2">
+              <Button className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold">Book Now</Button>
+              <Button className="bg-blue-700 hover:bg-blue-800 text-white font-bold">
+                <UserPlus className="mr-2 h-4 w-4" />
+                Sign Up
+              </Button>
+              <Button className="bg-blue-700 hover:bg-blue-800 text-white font-bold">
+                <LogIn className="mr-2 h-4 w-4" />
+                Login
+              </Button>
+            </div>
           </nav>
 
-          <div className="md:hidden">
-            <Button variant="ghost" size="icon" className="text-white">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <line x1="3" y1="18" x2="21" y2="18"></line>
-              </svg>
-              <span className="sr-only">Toggle menu</span>
-            </Button>
-          </div>
+          {/* Mobile Menu */}
+          <MobileMenu />
         </div>
       </header>
       <main className="flex-1 relative z-10">
@@ -128,10 +120,10 @@ export default function Home() {
                   occasions throughout Door County.
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Button variant="outline" className="border-white text-white hover:bg-white/20 text-lg">
+                  <Button className="bg-blue-700 hover:bg-blue-800 text-white text-lg font-bold border-2 border-white">
                     View Bouncy Houses
                   </Button>
-                  <Button variant="outline" className="border-white text-white hover:bg-white/20 text-lg">
+                  <Button className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 text-lg font-bold border-2 border-white">
                     Contact Us
                   </Button>
                 </div>
@@ -160,47 +152,47 @@ export default function Home() {
                 {
                   title: "Birthday Parties",
                   description: "Make your child's birthday the talk of the town with our colorful bouncy castles.",
-                  icon: <Anchor className="h-10 w-10 text-blue-600" />,
-                  color: "bg-white/80 border-blue-300 hover:bg-white",
+                  icon: <Anchor className="h-10 w-10 text-white" />,
+                  color: "bg-gradient-to-b from-blue-500 to-blue-600 text-white",
                 },
                 {
                   title: "School Events",
                   description: "Perfect for school carnivals, field days, and end-of-year celebrations.",
-                  icon: <Users className="h-10 w-10 text-teal-500" />,
-                  color: "bg-white/80 border-teal-300 hover:bg-white",
+                  icon: <Users className="h-10 w-10 text-white" />,
+                  color: "bg-gradient-to-b from-teal-500 to-teal-600 text-white",
                 },
                 {
                   title: "Community Festivals",
                   description: "Add excitement to your community event with our range of bouncy attractions.",
-                  icon: <MapPin className="h-10 w-10 text-cyan-500" />,
-                  color: "bg-white/80 border-cyan-300 hover:bg-white",
+                  icon: <MapPin className="h-10 w-10 text-white" />,
+                  color: "bg-gradient-to-b from-cyan-500 to-cyan-600 text-white",
                 },
                 {
                   title: "Church Events",
                   description: "Safe and fun entertainment for church picnics and gatherings.",
-                  icon: <Star className="h-10 w-10 text-blue-500" />,
-                  color: "bg-white/80 border-blue-300 hover:bg-white",
+                  icon: <Star className="h-10 w-10 text-white" />,
+                  color: "bg-gradient-to-b from-indigo-500 to-indigo-600 text-white",
                 },
                 {
                   title: "Corporate Functions",
                   description: "Yes, adults can have fun too! Great for company picnics and team building.",
-                  icon: <Users className="h-10 w-10 text-teal-500" />,
-                  color: "bg-white/80 border-teal-300 hover:bg-white",
+                  icon: <Users className="h-10 w-10 text-white" />,
+                  color: "bg-gradient-to-b from-purple-500 to-purple-600 text-white",
                 },
                 {
                   title: "Special Occasions",
                   description: "From graduations to family reunions, we'll help you celebrate in style.",
-                  icon: <Calendar className="h-10 w-10 text-cyan-500" />,
-                  color: "bg-white/80 border-cyan-300 hover:bg-white",
+                  icon: <Calendar className="h-10 w-10 text-white" />,
+                  color: "bg-gradient-to-b from-pink-500 to-pink-600 text-white",
                 },
               ].map((service, index) => (
                 <div
                   key={index}
-                  className={`flex flex-col items-center space-y-2 rounded-lg border p-6 ${service.color} transition-all hover:shadow-lg backdrop-blur-sm`}
+                  className={`flex flex-col items-center space-y-3 rounded-lg p-6 ${service.color} transition-all hover:shadow-lg backdrop-blur-sm shadow-md`}
                 >
-                  <div className="rounded-full p-3 bg-white shadow-sm">{service.icon}</div>
-                  <h3 className="text-xl font-bold text-blue-900 wave-text">{service.title}</h3>
-                  <p className="text-sm text-blue-950 text-center">{service.description}</p>
+                  <div className="rounded-full p-3 bg-white/20 shadow-sm">{service.icon}</div>
+                  <h3 className="text-xl font-bold">{service.title}</h3>
+                  <p className="text-sm text-white/90 text-center">{service.description}</p>
                 </div>
               ))}
             </div>
@@ -236,7 +228,7 @@ export default function Home() {
                   className="group relative overflow-hidden rounded-lg shadow-lg transition-all hover:shadow-xl border-4 border-white"
                 >
                   <Image
-                    src={`/placeholder.svg?height=300&width=400&text=${bouncy.name}`}
+                    src={`/placeholder-graphic.png?key=o840u&height=300&width=400&text=${bouncy.name}`}
                     alt={bouncy.name}
                     width={400}
                     height={300}
@@ -247,10 +239,7 @@ export default function Home() {
                   >
                     <div>
                       <h3 className="text-xl font-bold text-white wave-text">{bouncy.name}</h3>
-                      <Button
-                        variant="outline"
-                        className="mt-2 bg-white/20 text-white backdrop-blur-sm hover:bg-white/30"
-                      >
+                      <Button className="mt-2 bg-white/20 text-white backdrop-blur-sm hover:bg-white/30">
                         View Details
                       </Button>
                     </div>
@@ -308,9 +297,7 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
-                <Button variant="outline" className="mt-4 border-white text-white hover:bg-white/20">
-                  Learn More
-                </Button>
+                <Button className="mt-4 bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold">Learn More</Button>
               </div>
             </div>
           </div>
@@ -362,9 +349,9 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
-                <Button variant="outline" className="mt-4 border-white text-white hover:bg-white/20">
-                  Read More
-                </Button>
+                <Link href="/blog">
+                  <Button className="mt-4 bg-blue-700 hover:bg-blue-800 text-white font-bold">Visit Our Blog</Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -409,12 +396,8 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row mt-6">
-                  <Button variant="outline" className="border-white text-white hover:bg-white/20">
-                    Email Us
-                  </Button>
-                  <Button variant="outline" className="border-white text-white hover:bg-white/20">
-                    Request Info
-                  </Button>
+                  <Button className="bg-blue-700 hover:bg-blue-800 text-white font-bold">Email Us</Button>
+                  <Button className="bg-blue-700 hover:bg-blue-800 text-white font-bold">Request Info</Button>
                 </div>
               </div>
             </div>
@@ -433,12 +416,8 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                <Button variant="outline" className="border-white text-white hover:bg-white/20 text-lg">
-                  Contact Us
-                </Button>
-                <Button variant="outline" className="border-white text-white hover:bg-white/20 text-lg">
-                  View Gallery
-                </Button>
+                <Button className="bg-blue-700 hover:bg-blue-800 text-white text-lg font-bold">Contact Us</Button>
+                <Button className="bg-blue-700 hover:bg-blue-800 text-white text-lg font-bold">View Gallery</Button>
               </div>
             </div>
           </div>

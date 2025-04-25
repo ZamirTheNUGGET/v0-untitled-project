@@ -64,13 +64,13 @@ export default function CustomCursor() {
         {/* Main cursor */}
         <div
           className={`absolute rounded-full -translate-x-1/2 -translate-y-1/2 transition-all duration-200 ease-out
-                     ${isClicking ? "scale-90" : "scale-100"}
-                     ${isPointer ? "bg-yellow-400/70" : "bg-white/70"}`}
+             ${isClicking ? "scale-90" : "scale-100"}
+             ${isPointer ? "bg-yellow-400/80 border border-blue-500" : "bg-blue-500/70 border border-white"}`}
           style={{
             width: isPointer ? "40px" : "20px",
             height: isPointer ? "40px" : "20px",
             backdropFilter: "blur(2px)",
-            boxShadow: "0 0 10px rgba(255, 255, 255, 0.5)",
+            boxShadow: "0 0 10px rgba(59, 130, 246, 0.5)",
           }}
         ></div>
 

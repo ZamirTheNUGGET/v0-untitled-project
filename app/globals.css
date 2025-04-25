@@ -58,6 +58,15 @@
   }
 }
 
+/* Add these styles to ensure button text is always visible */
+.btn,
+button,
+[type="button"],
+[type="submit"] {
+  font-weight: 600;
+  text-shadow: none;
+}
+
 /* Ocean and Wave Animations */
 .ocean {
   height: 100%;
@@ -107,31 +116,16 @@
   }
 }
 
-/* Wave Text Effect */
+/* Text Highlight Effect */
 .wave-text {
   position: relative;
-  overflow: hidden;
-  display: inline-block;
+  transition: color 0.3s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-.wave-text:hover::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  animation: wave-text 1.5s ease-in-out;
-}
-
-@keyframes wave-text {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 100%;
-  }
+/* Hover effect for wave-text in colored backgrounds */
+.wave-text:hover {
+  color: #fcd34d; /* yellow-300 */
 }
 
 /* Bubble Animation for Navigation */
@@ -156,4 +150,78 @@
 
 .animate-bubble-pop {
   animation: bubble-pop 1s ease-out forwards;
+}
+
+/* Ensure white text on colored backgrounds has a subtle shadow for better visibility */
+.text-white {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Ensure dark text on light backgrounds has no shadow */
+.text-blue-900,
+.text-gray-900,
+.text-black {
+  text-shadow: none;
+}
+
+/* Improved text visibility for mobile */
+@media (max-width: 768px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  p,
+  span,
+  a {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .wave-text {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Make blog content more readable */
+.prose {
+  color: #1e293b; /* slate-800 */
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+
+.prose h2 {
+  color: #1e40af; /* blue-800 */
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+}
+
+.prose ul {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .prose {
+    font-size: 1rem;
+  }
+
+  .prose h2 {
+    font-size: 1.25rem;
+  }
 }
