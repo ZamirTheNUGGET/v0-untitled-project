@@ -1,62 +1,11 @@
 import Link from "next/link"
 import Image from "next/image"
-import {
-  Calendar,
-  Clock,
-  ShoppingBag,
-  BookOpen,
-  LogIn,
-  UserPlus,
-  Phone,
-  HelpCircle,
-  ArrowLeft,
-  Users,
-} from "lucide-react"
+import { ArrowLeft, ShoppingBag, BookOpen, LogIn, UserPlus, Phone, HelpCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/mobile-menu"
 import Logo from "@/components/logo"
 
-export default function BlogPage() {
-  // Sample blog posts data
-  const blogPosts = [
-    {
-      slug: "about-us",
-      title: "About Us: We Bring The Bounce So You Can Bring The Fun!",
-      excerpt:
-        "Welcome to Door County Bouncy House! We're Zamir and Zohran Overbeck. We are two brothers on a mission to turn ordinary gatherings into unforgettable celebrations in Door County with our bouncy houses.",
-      date: "April 30, 2025",
-      author: "Zamir & Zohran Overbeck",
-      readTime: "3 min read",
-      category: "Our Story",
-      image: "/placeholder.svg?height=400&width=800&text=About+Us",
-      color: "from-blue-600 to-blue-800",
-    },
-    {
-      slug: "best-event-ideas-for-a-door-county-bouncy-house",
-      title: "Best Event Ideas for a Door County Bouncy House",
-      excerpt:
-        "Door County is the perfect backdrop for unforgettable celebrations. Discover the best occasions to rent a bouncy house in Door County.",
-      date: "May 10, 2025",
-      author: "Door County Bouncy Team",
-      readTime: "4 min read",
-      category: "Event Planning",
-      image: "/placeholder.svg?height=400&width=800&text=Event+Ideas",
-      color: "from-green-500 to-green-600",
-    },
-    {
-      slug: "why-our-door-county-bouncy-house-rentals-are-the-best",
-      title: "Why Our Door County Bouncy House Rentals Are the Best",
-      excerpt:
-        "Looking to create unforgettable memories for your next event in Door County? Our Door County Bouncy House rental service literally delivers hours of fun for kids!",
-      date: "April 25, 2025",
-      author: "Door County Bouncy Team",
-      readTime: "3 min read",
-      category: "Rentals",
-      image: "/placeholder.svg?height=400&width=800&text=Best+Rentals",
-      color: "from-yellow-500 to-amber-600",
-    },
-  ]
-
+export default function AboutUsPage() {
   return (
     <div className="flex min-h-screen flex-col relative overflow-hidden bg-gradient-to-b from-sky-400 via-cyan-300 to-blue-500">
       {/* Animated Waves Background */}
@@ -112,81 +61,108 @@ export default function BlogPage() {
       </header>
 
       <main className="flex-1 relative z-10">
-        <section className="w-full py-12 md:py-16 lg:py-20 relative">
+        <article className="w-full py-12 md:py-16 lg:py-20 relative">
           <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-8 md:mb-12">
+            <div className="mx-auto max-w-4xl">
               <Link
-                href="/"
-                className="flex items-center gap-2 text-white hover:text-yellow-300 transition-colors mb-4"
+                href="/blog"
+                className="flex items-center gap-2 text-white hover:text-yellow-300 transition-colors mb-8"
               >
                 <ArrowLeft className="h-4 w-4" />
-                <span>Back to Home</span>
+                <span>Back to Blog</span>
               </Link>
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-yellow-400 px-3 py-1 text-sm text-blue-900 font-bold">
-                  Our Blog
-                </div>
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white drop-shadow-md">
-                  Bouncy House Adventures
+
+              {/* Featured Image */}
+              <div className="relative w-full h-[300px] md:h-[400px] rounded-xl overflow-hidden mb-8 shadow-xl border-4 border-white">
+                <Image
+                  src="/placeholder.svg?height=600&width=1200&text=Zamir+and+Zohran+Overbeck"
+                  alt="Zamir and Zohran Overbeck"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+
+              {/* Post Header */}
+              <div className="bg-gradient-to-br from-blue-600 to-blue-800 text-white rounded-xl p-6 md:p-8 mb-8 shadow-lg">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+                  About Us: We Bring The Bounce So You Can Bring The Fun!
                 </h1>
-                <p className="max-w-[900px] text-white text-opacity-90 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Tips, stories, and insights about bouncy houses and creating memorable events
-                </p>
+              </div>
+
+              {/* Post Content */}
+              <div className="bg-blue-50 rounded-xl p-6 md:p-8 shadow-lg mb-8">
+                <div className="prose prose-blue max-w-none">
+                  <p className="text-lg">
+                    Welcome to Door County Bouncy House! We're Zamir and Zohran Overbeck. We are two brothers on a
+                    mission to turn ordinary gatherings into unforgettable celebrations in Door County with our bouncy
+                    houses.
+                  </p>
+
+                  <h2 className="text-2xl font-bold text-blue-800 mt-8 mb-4">Our Story</h2>
+                  <p>
+                    Our journey began at a birthday party when we wanted to rent a bouncy house for our own birthdays.
+                    The nearest company was all the way in Green Bay. That's when we had an idea: why not bring the fun
+                    closer to home?
+                  </p>
+                  <p>
+                    We started Door County Bouncy Houses so families right here in Door County could enjoy the same
+                    excitement and happiness we loved as kids.
+                  </p>
+                  <p>
+                    Whether it's a birthday bash, a community festival, or a backyard family reunion, we believe every
+                    kid and adult deserves a chance to laugh, jump, and make joyful memories together.
+                  </p>
+
+                  <h2 className="text-2xl font-bold text-blue-800 mt-8 mb-4">
+                    Our Mission: We Bring The Bounce So You Can Bring The Fun!
+                  </h2>
+
+                  <h3 className="text-xl font-bold text-blue-700 mt-6 mb-3">Why Choose Door County Bouncy Houses</h3>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>
+                      <strong>Safety First:</strong> We carefully inspect and sanitize all our equipment to keep every
+                      event safe and worry-free.
+                    </li>
+                    <li>
+                      <strong>Plenty of Options:</strong> From classic castles to creative party games, we offer a
+                      variety of rentals to fit any theme or occasion.
+                    </li>
+                    <li>
+                      <strong>Service with Heart:</strong> As a family-run business, we treat every customer like a
+                      neighbor…well, 'cause we probably are your neighbor! Plus, it's all hassle-free. We take care of
+                      the delivery, setup, and takedown so you can focus on the fun.
+                    </li>
+                  </ul>
+
+                  <h2 className="text-2xl font-bold text-blue-800 mt-8 mb-4">Serving Door County and Beyond</h2>
+                  <p>
+                    We'll deliver and set up bouncy houses all across Door County, from Brussels, Sturgeon Bay
+                    Jacksonport, Baileys Harbor, Egg Harbor, Fish Creek, Sister Bay, Ellison Bay, to the top of the
+                    Thumb. Wherever your celebration is, we'll bring the bounce so you can bring the fun!
+                  </p>
+                  <p>
+                    When you book with us, you're supporting a local family business—and helping two brothers chase
+                    their dream of spreading joy throughout our community.
+                  </p>
+
+                  <p className="text-lg font-bold text-blue-800 mt-8">Thanks for visiting our site!</p>
+                  <p className="text-lg font-bold text-blue-800">Zamir & Zohran</p>
+                </div>
+              </div>
+
+              {/* Call to Action */}
+              <div className="bg-gradient-to-br from-yellow-400 to-yellow-500 text-blue-900 rounded-xl p-6 md:p-8 shadow-lg">
+                <h2 className="text-2xl font-bold mb-4">Ready to Bounce?</h2>
+                <p className="mb-6">Contact us today to book a bouncy house for your next event in Door County!</p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button className="bg-blue-700 hover:bg-blue-800 text-white">Book Now</Button>
+                  <Button className="bg-white hover:bg-blue-50 text-blue-900">Contact Us</Button>
+                </div>
               </div>
             </div>
-
-            {/* Blog Post Grid */}
-            <div className="grid gap-6 md:grid-cols-3">
-              {blogPosts.map((post, index) => {
-                return (
-                  <Link key={post.slug} href={`/blog/${post.slug}`} className="block group">
-                    <div
-                      className={`bg-gradient-to-br ${post.color} text-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02]`}
-                    >
-                      <div className="h-48 overflow-hidden">
-                        <Image
-                          src={post.image || "/placeholder.svg"}
-                          alt={post.title}
-                          width={600}
-                          height={300}
-                          className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
-                        />
-                      </div>
-                      <div className="p-6">
-                        <div className="flex items-center gap-2 text-xs text-white/80 mb-2">
-                          {post.slug === "about-us" ? (
-                            <>
-                              <Users className="h-3 w-3" />
-                              <span>Our Founders</span>
-                            </>
-                          ) : (
-                            <>
-                              <Calendar className="h-3 w-3" />
-                              <span>{post.date}</span>
-                            </>
-                          )}
-                          <span className="mx-1">•</span>
-                          <Clock className="h-3 w-3" />
-                          <span>{post.readTime}</span>
-                        </div>
-                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-yellow-300 transition-colors">
-                          {post.title}
-                        </h3>
-                        <p className="text-white/90 text-sm mb-3 line-clamp-2">{post.excerpt}</p>
-                        <div className="flex items-center justify-between">
-                          <span className="inline-block bg-white/20 text-white text-xs px-2 py-1 rounded-full">
-                            {post.category}
-                          </span>
-                          <span className="text-white text-sm font-medium group-hover:underline">Read More →</span>
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
-                )
-              })}
-            </div>
           </div>
-        </section>
+        </article>
       </main>
 
       <footer className="w-full border-t bg-blue-900 text-white py-6 relative z-10">

@@ -1,8 +1,20 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Anchor, ArrowLeft, Calendar, Clock, Tag, ShoppingBag, BookOpen, LogIn, UserPlus, Phone } from "lucide-react"
+import {
+  Calendar,
+  Clock,
+  Tag,
+  ShoppingBag,
+  BookOpen,
+  LogIn,
+  UserPlus,
+  Phone,
+  HelpCircle,
+  ArrowLeft,
+} from "lucide-react"
 import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/mobile-menu"
+import Logo from "@/components/logo"
 
 // Sample blog posts data - in a real app, this would come from a database or CMS
 const blogPosts = [
@@ -10,7 +22,7 @@ const blogPosts = [
     slug: "top-5-bouncy-house-safety-tips",
     title: "Top 5 Bouncy House Safety Tips",
     excerpt: "Learn how to keep your children safe while they have a blast in our bouncy houses.",
-    date: "June 15, 2023",
+    date: "June 15, 2025",
     author: "Sarah Johnson",
     authorTitle: "Safety Specialist",
     authorImage: "/placeholder.svg?height=100&width=100&text=SJ",
@@ -44,7 +56,7 @@ const blogPosts = [
     slug: "planning-the-perfect-bouncy-house-party",
     title: "Planning the Perfect Bouncy House Party",
     excerpt: "Everything you need to know to plan an amazing bouncy house party for your child.",
-    date: "May 22, 2023",
+    date: "May 22, 2025",
     author: "Mike Thompson",
     authorTitle: "Event Coordinator",
     authorImage: "/placeholder.svg?height=100&width=100&text=MT",
@@ -78,44 +90,40 @@ const blogPosts = [
     relatedPosts: ["top-5-bouncy-house-safety-tips", "bouncy-house-themes-for-every-occasion"],
   },
   {
-    slug: "why-bouncy-houses-are-great-for-child-development",
-    title: "Why Bouncy Houses Are Great for Child Development",
-    excerpt: "Discover the surprising developmental benefits of bouncy house play for children.",
-    date: "April 10, 2023",
-    author: "Dr. Emily Chen",
-    authorTitle: "Child Development Specialist",
-    authorImage: "/placeholder.svg?height=100&width=100&text=EC",
-    readTime: "6 min read",
-    category: "Child Development",
-    image: "/placeholder.svg?height=600&width=1200&text=Child+Development",
-    color: "from-cyan-500 to-cyan-600",
+    slug: "best-event-ideas-for-a-door-county-bouncy-house",
+    title: "Best Event Ideas for a Door County Bouncy House",
+    excerpt:
+      "Door County is the perfect backdrop for unforgettable celebrations. Discover the best occasions to rent a bouncy house in Door County.",
+    date: "May 10, 2025",
+    author: "Door County Bouncy Team",
+    authorTitle: "Event Specialists",
+    authorImage: "/placeholder.svg?height=100&width=100&text=DCB",
+    readTime: "4 min read",
+    category: "Event Planning",
+    image: "/placeholder.svg?height=600&width=1200&text=Event+Ideas",
+    color: "from-green-500 to-green-600",
     content: `
-      <p>Bouncy houses aren't just fun – they offer numerous developmental benefits for children. Here's how bouncy houses contribute to healthy child development:</p>
+      <p>Door County is the perfect backdrop for unforgettable celebrations, from Lake Michigan or from the Bayside of the county. Here are some of the best occasions to rent a <strong>bouncy house in Door County</strong>:</p>
       
-      <h2>Physical Development</h2>
-      <p>Jumping and playing in bouncy houses helps children develop gross motor skills, balance, and coordination. The constant movement strengthens muscles, improves cardiovascular health, and builds endurance.</p>
+      <h2>🎉 Rent a Bounce House for a Birthday Party</h2>
+      <p>Looking for a way to make your child's birthday party unforgettable? A bouncy house is guaranteed to keep kids entertained for hours and creates memories they'll cherish for years. We deliver the fun right to your Door County location—just add cake and laughter!</p>
       
-      <h2>Sensory Processing</h2>
-      <p>The bouncing motion provides valuable vestibular (balance) stimulation, which is crucial for sensory processing development. This type of sensory input helps children regulate their bodies and can be particularly beneficial for children with sensory processing challenges.</p>
+      <h2>👨‍👩‍👧‍👦 Make Your Family Reunion or Neighborhood Gathering Extra Fun</h2>
+      <p>Turn your next family reunion or neighborhood get-together into a celebration everyone will remember. Our Door County Bouncy Houses keep the kids busy and happy, so adults can relax, reconnect, and enjoy the day.</p>
       
-      <h2>Social Skills</h2>
-      <p>Bouncy houses create opportunities for children to practice taking turns, sharing space, and cooperating with others. These interactions help develop crucial social skills and emotional intelligence.</p>
+      <h2>🎪 Festivals & Community Gatherings</h2>
+      <p>Want to make your festival booth or community event the hottest spot in Door County? Rent a bouncy house! Kids can't resist the fun, making it a great way to attract families and create a lively atmosphere at any gathering.</p>
       
-      <h2>Emotional Development</h2>
-      <p>The physical activity in bouncy houses releases endorphins, promoting positive mood and reducing stress. Conquering fears (like jumping higher) builds confidence and resilience.</p>
-      
-      <h2>Cognitive Benefits</h2>
-      <p>Navigating through bouncy obstacles requires problem-solving skills and spatial awareness. Children must make quick decisions about how to move their bodies through space, enhancing cognitive development.</p>
-      
-      <p>By understanding these developmental benefits, parents can see bouncy houses as more than just entertainment – they're valuable tools for supporting healthy child development through play.</p>
+      <h2>🥳 Add Excitement to Church Picnics and School Fundraisers</h2>
+      <p>Looking for a way to boost the energy at your next church picnic or school fundraiser? A bouncy house is the perfect addition—bringing color, excitement, and joy to every attendee, young and old.</p>
     `,
-    relatedPosts: ["best-bouncy-houses-for-different-age-groups", "top-5-bouncy-house-safety-tips"],
+    relatedPosts: ["planning-the-perfect-bouncy-house-party", "why-our-door-county-bouncy-house-rentals-are-the-best"],
   },
   {
     slug: "best-bouncy-houses-for-different-age-groups",
     title: "Best Bouncy Houses for Different Age Groups",
     excerpt: "Find out which bouncy house is most suitable for your child's age group.",
-    date: "March 5, 2023",
+    date: "March 5, 2025",
     author: "Tom Wilson",
     authorTitle: "Product Specialist",
     authorImage: "/placeholder.svg?height=100&width=100&text=TW",
@@ -171,7 +179,7 @@ const blogPosts = [
     slug: "how-to-clean-and-maintain-your-bouncy-house",
     title: "How to Clean and Maintain Your Bouncy House",
     excerpt: "Tips and tricks for keeping your bouncy house clean, safe, and in good condition.",
-    date: "February 18, 2023",
+    date: "February 18, 2025",
     author: "Lisa Martinez",
     authorTitle: "Maintenance Specialist",
     authorImage: "/placeholder.svg?height=100&width=100&text=LM",
@@ -224,59 +232,24 @@ const blogPosts = [
     relatedPosts: ["top-5-bouncy-house-safety-tips", "bouncy-house-themes-for-every-occasion"],
   },
   {
-    slug: "bouncy-house-themes-for-every-occasion",
-    title: "Bouncy House Themes for Every Occasion",
-    excerpt: "Explore different themed bouncy houses for birthdays, holidays, and special events.",
-    date: "January 30, 2023",
-    author: "Jessica Brown",
-    authorTitle: "Creative Director",
-    authorImage: "/placeholder.svg?height=100&width=100&text=JB",
-    readTime: "5 min read",
-    category: "Themes",
-    image: "/placeholder.svg?height=600&width=1200&text=Themes",
-    color: "from-pink-500 to-pink-600",
+    slug: "why-our-door-county-bouncy-house-rentals-are-the-best",
+    title: "Why Our Door County Bouncy House Rentals Are the Best",
+    excerpt:
+      "Looking to create unforgettable memories for your next event in Door County? Our Door County Bouncy House rental service literally delivers hours of fun for kids!",
+    date: "April 25, 2025",
+    author: "Door County Bouncy Team",
+    authorTitle: "Rental Specialists",
+    authorImage: "/placeholder.svg?height=100&width=100&text=DCB",
+    readTime: "3 min read",
+    category: "Rentals",
+    image: "/placeholder.svg?height=600&width=1200&text=Best+Rentals",
+    color: "from-yellow-500 to-amber-600",
     content: `
-      <p>Themed bouncy houses add an extra layer of excitement to any event. Here's our guide to choosing the perfect themed inflatable for different occasions:</p>
+      <p>Looking to create unforgettable memories for your next event in Door County? Our Door County Bouncy House rental service literally delivers hours of fun for kids! Whether you're planning a birthday party, a family reunion, or a neighborhood get-together our inflatable rentals are the perfect way to bring joy and excitement to your guests.</p>
       
-      <h2>Birthday Parties</h2>
-      <p>Match the bouncy house to your child's interests:</p>
-      <ul>
-        <li>Princess Castle: Perfect for fairy tale enthusiasts</li>
-        <li>Superhero Adventure: Great for little crime-fighters</li>
-        <li>Dinosaur Kingdom: Ideal for prehistoric fans</li>
-        <li>Sports Arena: For athletic children</li>
-        <li>Underwater Adventure: Features sea creatures and mermaids</li>
-      </ul>
-      
-      <h2>Seasonal Events</h2>
-      <p>Celebrate holidays with themed inflatables:</p>
-      <ul>
-        <li>Halloween: Haunted house bouncy castles with friendly ghosts</li>
-        <li>Christmas: Santa's workshop or winter wonderland themes</li>
-        <li>Easter: Bunny-themed bounce houses with pastel colors</li>
-        <li>Summer: Beach or tropical-themed inflatables</li>
-      </ul>
-      
-      <h2>Community Events</h2>
-      <p>Larger inflatables for public gatherings:</p>
-      <ul>
-        <li>Carnival Themes: Circus-inspired designs with bright colors</li>
-        <li>Sports Themes: Football, basketball, or multi-sport inflatables</li>
-        <li>Adventure Courses: Obstacle-style inflatables for competitions</li>
-        <li>Movie Themes: Popular character-themed bounce houses</li>
-      </ul>
-      
-      <h2>Educational Events</h2>
-      <p>Learning-focused inflatables:</p>
-      <ul>
-        <li>Space Exploration: Rocket ships and planets</li>
-        <li>Jungle Safari: Wildlife-themed with educational elements</li>
-        <li>Storybook Characters: Based on popular children's books</li>
-      </ul>
-      
-      <p>When selecting a themed bouncy house, consider the age group, number of participants, and available space. The right theme can transform a regular event into an unforgettable experience that children will talk about for years to come.</p>
+      <p>We Bring The Bounce So You Can Bring The Fun!</p>
     `,
-    relatedPosts: ["planning-the-perfect-bouncy-house-party", "best-bouncy-houses-for-different-age-groups"],
+    relatedPosts: ["top-5-bouncy-house-safety-tips", "planning-the-perfect-bouncy-house-party"],
   },
 ]
 
@@ -313,10 +286,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
       <header className="sticky top-0 z-50 w-full border-b bg-blue-600/90 backdrop-blur-sm text-white">
         <div className="container flex h-16 items-center justify-between px-4 md:px-6">
-          <Link href="/" className="flex items-center gap-2">
-            <Anchor className="h-6 w-6 text-white" />
-            <span className="text-xl font-bold text-white wave-text">Door County Bouncy House</span>
-          </Link>
+          <Logo />
 
           {/* Desktop Navigation Menu */}
           <nav className="hidden md:flex items-center">
@@ -324,6 +294,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               {[
                 { name: "Products", href: "/products", icon: <ShoppingBag className="h-4 w-4" /> },
                 { name: "Blog", href: "/blog", icon: <BookOpen className="h-4 w-4" /> },
+                { name: "FAQ", href: "/faq", icon: <HelpCircle className="h-4 w-4" /> },
                 { name: "Contact", href: "/#contact", icon: <Phone className="h-4 w-4" /> },
               ].map((item, index) => (
                 <Link
@@ -453,10 +424,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
       <footer className="w-full border-t bg-blue-900 text-white py-6 relative z-10">
         <div className="container flex flex-col items-center justify-center gap-4 px-4 md:px-6 md:flex-row md:justify-between">
-          <div className="flex items-center gap-2">
-            <Anchor className="h-6 w-6 text-yellow-400" />
-            <span className="text-lg font-bold text-yellow-400">Door County Bouncy House</span>
-          </div>
+          <Logo variant="footer" />
           <p className="text-center text-sm text-white/80 md:text-left">
             &copy; {new Date().getFullYear()} Door County Bouncy House. All rights reserved.
           </p>

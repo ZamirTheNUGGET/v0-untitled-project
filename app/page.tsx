@@ -1,7 +1,8 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Anchor, Calendar, MapPin, Phone, ShoppingBag, BookOpen, LogIn, UserPlus, Star, Users } from "lucide-react"
+import { Calendar, MapPin, Phone, ShoppingBag, BookOpen, LogIn, UserPlus, Star, Users, HelpCircle } from "lucide-react"
 import MobileMenu from "@/components/mobile-menu"
+import Logo from "@/components/logo"
 
 import { Button } from "@/components/ui/button"
 import CustomCursor from "@/components/custom-cursor"
@@ -51,10 +52,7 @@ export default function Home() {
 
       <header className="sticky top-0 z-50 w-full border-b bg-blue-600/90 backdrop-blur-sm text-white">
         <div className="container flex h-16 items-center justify-between px-4 md:px-6">
-          <Link href="/" className="flex items-center gap-2">
-            <Anchor className="h-6 w-6 text-white" />
-            <span className="text-xl font-bold text-white wave-text">Door County Bouncy House</span>
-          </Link>
+          <Logo />
 
           {/* Desktop Navigation Menu */}
           <nav className="hidden md:flex items-center">
@@ -62,6 +60,7 @@ export default function Home() {
               {[
                 { name: "Products", href: "/products", icon: <ShoppingBag className="h-4 w-4" /> },
                 { name: "Blog", href: "/blog", icon: <BookOpen className="h-4 w-4" /> },
+                { name: "FAQ", href: "/faq", icon: <HelpCircle className="h-4 w-4" /> },
                 { name: "Contact", href: "#contact", icon: <Phone className="h-4 w-4" /> },
               ].map((item, index) => (
                 <Link
@@ -152,7 +151,7 @@ export default function Home() {
                 {
                   title: "Birthday Parties",
                   description: "Make your child's birthday the talk of the town with our colorful bouncy castles.",
-                  icon: <Anchor className="h-10 w-10 text-white" />,
+                  icon: <Star className="h-10 w-10 text-white" />,
                   color: "bg-gradient-to-b from-blue-500 to-blue-600 text-white",
                 },
                 {
@@ -332,15 +331,15 @@ export default function Home() {
                   {[
                     {
                       title: "Top 5 Bouncy House Safety Tips",
-                      date: "June 15, 2023",
+                      date: "June 15, 2025",
                     },
                     {
                       title: "Planning the Perfect Bouncy House Party",
-                      date: "May 22, 2023",
+                      date: "May 22, 2025",
                     },
                     {
                       title: "Why Bouncy Houses Are Great for Child Development",
-                      date: "April 10, 2023",
+                      date: "April 10, 2025",
                     },
                   ].map((post, index) => (
                     <div key={index} className="flex flex-col">
@@ -425,10 +424,7 @@ export default function Home() {
       </main>
       <footer className="w-full border-t bg-blue-900 text-white py-6 relative z-10">
         <div className="container flex flex-col items-center justify-center gap-4 px-4 md:px-6 md:flex-row md:justify-between">
-          <div className="flex items-center gap-2">
-            <Anchor className="h-6 w-6 text-yellow-400" />
-            <span className="text-lg font-bold text-yellow-400 wave-text">Door County Bouncy House</span>
-          </div>
+          <Logo variant="footer" />
           <p className="text-center text-sm text-white/80 md:text-left">
             &copy; {new Date().getFullYear()} Door County Bouncy House. All rights reserved.
           </p>

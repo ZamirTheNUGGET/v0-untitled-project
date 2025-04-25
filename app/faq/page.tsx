@@ -1,62 +1,9 @@
 import Link from "next/link"
-import Image from "next/image"
-import {
-  Calendar,
-  Clock,
-  ShoppingBag,
-  BookOpen,
-  LogIn,
-  UserPlus,
-  Phone,
-  HelpCircle,
-  ArrowLeft,
-  Users,
-} from "lucide-react"
+import { Anchor, ArrowLeft, ShoppingBag, BookOpen, LogIn, UserPlus, Phone, HelpCircle, Plus, Minus } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/mobile-menu"
-import Logo from "@/components/logo"
 
-export default function BlogPage() {
-  // Sample blog posts data
-  const blogPosts = [
-    {
-      slug: "about-us",
-      title: "About Us: We Bring The Bounce So You Can Bring The Fun!",
-      excerpt:
-        "Welcome to Door County Bouncy House! We're Zamir and Zohran Overbeck. We are two brothers on a mission to turn ordinary gatherings into unforgettable celebrations in Door County with our bouncy houses.",
-      date: "April 30, 2025",
-      author: "Zamir & Zohran Overbeck",
-      readTime: "3 min read",
-      category: "Our Story",
-      image: "/placeholder.svg?height=400&width=800&text=About+Us",
-      color: "from-blue-600 to-blue-800",
-    },
-    {
-      slug: "best-event-ideas-for-a-door-county-bouncy-house",
-      title: "Best Event Ideas for a Door County Bouncy House",
-      excerpt:
-        "Door County is the perfect backdrop for unforgettable celebrations. Discover the best occasions to rent a bouncy house in Door County.",
-      date: "May 10, 2025",
-      author: "Door County Bouncy Team",
-      readTime: "4 min read",
-      category: "Event Planning",
-      image: "/placeholder.svg?height=400&width=800&text=Event+Ideas",
-      color: "from-green-500 to-green-600",
-    },
-    {
-      slug: "why-our-door-county-bouncy-house-rentals-are-the-best",
-      title: "Why Our Door County Bouncy House Rentals Are the Best",
-      excerpt:
-        "Looking to create unforgettable memories for your next event in Door County? Our Door County Bouncy House rental service literally delivers hours of fun for kids!",
-      date: "April 25, 2025",
-      author: "Door County Bouncy Team",
-      readTime: "3 min read",
-      category: "Rentals",
-      image: "/placeholder.svg?height=400&width=800&text=Best+Rentals",
-      color: "from-yellow-500 to-amber-600",
-    },
-  ]
-
+export default function FAQPage() {
   return (
     <div className="flex min-h-screen flex-col relative overflow-hidden bg-gradient-to-b from-sky-400 via-cyan-300 to-blue-500">
       {/* Animated Waves Background */}
@@ -68,7 +15,10 @@ export default function BlogPage() {
 
       <header className="sticky top-0 z-50 w-full border-b bg-blue-600/90 backdrop-blur-sm text-white">
         <div className="container flex h-16 items-center justify-between px-4 md:px-6">
-          <Logo />
+          <Link href="/" className="flex items-center gap-2">
+            <Anchor className="h-6 w-6 text-white" />
+            <span className="text-xl font-bold text-white wave-text">Door County Bouncy House</span>
+          </Link>
 
           {/* Desktop Navigation Menu */}
           <nav className="hidden md:flex items-center">
@@ -83,7 +33,7 @@ export default function BlogPage() {
                   key={index}
                   href={item.href}
                   className={`relative flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-blue-500/70 group overflow-hidden ${
-                    item.name === "Blog" ? "bg-blue-500/70" : ""
+                    item.name === "FAQ" ? "bg-blue-500/70" : ""
                   }`}
                 >
                   <span className="absolute inset-0 bg-gradient-to-r from-blue-400 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full -z-10"></span>
@@ -124,66 +74,92 @@ export default function BlogPage() {
               </Link>
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-yellow-400 px-3 py-1 text-sm text-blue-900 font-bold">
-                  Our Blog
+                  Frequently Asked Questions
                 </div>
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white drop-shadow-md">
-                  Bouncy House Adventures
+                  Everything You Need to Know
                 </h1>
                 <p className="max-w-[900px] text-white text-opacity-90 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Tips, stories, and insights about bouncy houses and creating memorable events
+                  Find answers to common questions about our bouncy house rentals
                 </p>
               </div>
             </div>
 
-            {/* Blog Post Grid */}
-            <div className="grid gap-6 md:grid-cols-3">
-              {blogPosts.map((post, index) => {
-                return (
-                  <Link key={post.slug} href={`/blog/${post.slug}`} className="block group">
-                    <div
-                      className={`bg-gradient-to-br ${post.color} text-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02]`}
-                    >
-                      <div className="h-48 overflow-hidden">
-                        <Image
-                          src={post.image || "/placeholder.svg"}
-                          alt={post.title}
-                          width={600}
-                          height={300}
-                          className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
-                        />
+            <div className="mx-auto max-w-3xl space-y-6">
+              {/* FAQ Accordion */}
+              {[
+                {
+                  question: "How far in advance should I book a bouncy house?",
+                  answer:
+                    "We recommend booking at least 2-3 weeks in advance, especially during peak season (May-September). For weekend events or holidays, booking 4-6 weeks ahead is advisable to ensure availability of your preferred bouncy house.",
+                },
+                {
+                  question: "What happens if it rains on the day of my event?",
+                  answer:
+                    "If there's light rain, our bouncy houses can still be used with proper supervision. However, for heavy rain, thunderstorms, or winds over 15-20 mph, we'll work with you to reschedule your rental for safety reasons. We monitor weather forecasts closely and will contact you 24-48 hours before your event if weather concerns arise.",
+                },
+                {
+                  question: "How much space do I need for a bouncy house?",
+                  answer:
+                    "Space requirements vary by bouncy house size. Our standard units need approximately 15'x15' of flat, clear space. Larger obstacle courses may require up to 35'x15'. Additionally, you'll need at least 3-4 feet of clearance on all sides and 15-20 feet of overhead clearance (no tree branches or power lines). We'll provide specific requirements for your chosen inflatable when you book.",
+                },
+                {
+                  question: "Do you provide setup and takedown?",
+                  answer:
+                    "Yes! Our rental price includes professional delivery, setup, and takedown. Our team will arrive 1-2 hours before your event start time to ensure everything is ready. At the end of your rental period, we'll return to deflate and remove the bouncy house.",
+                },
+                {
+                  question: "What power requirements are needed?",
+                  answer:
+                    "Our bouncy houses require a standard 110V electrical outlet within 50-100 feet of the setup location. The blower must run continuously during use. If you don't have access to power, we offer generator rentals for an additional fee.",
+                },
+                {
+                  question: "Are your bouncy houses safe?",
+                  answer:
+                    "Safety is our top priority! All our bouncy houses are commercial-grade, regularly inspected, and thoroughly cleaned between rentals. They include safety features like enclosed sides, netted windows, and soft landing surfaces. We provide safety instructions and recommend adult supervision at all times during use.",
+                },
+                {
+                  question: "What areas do you serve in Door County?",
+                  answer:
+                    "We serve all of Door County including Sturgeon Bay, Egg Harbor, Fish Creek, Sister Bay, Baileys Harbor, Ephraim, and surrounding areas. For locations outside Door County, please contact us for availability and any additional travel fees.",
+                },
+                {
+                  question: "What is your cancellation policy?",
+                  answer:
+                    "Cancellations made 7 or more days before your event receive a full refund. Cancellations within 3-6 days receive a 50% refund or the option to reschedule. Cancellations less than 48 hours before your event are non-refundable except in cases of severe weather, where we'll work with you to reschedule.",
+                },
+              ].map((faq, index) => (
+                <div
+                  key={index}
+                  className="bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-xl overflow-hidden shadow-lg"
+                >
+                  <details className="group">
+                    <summary className="flex cursor-pointer items-center justify-between p-6 font-medium">
+                      <h2 className="text-xl font-bold">{faq.question}</h2>
+                      <div className="ml-4">
+                        <Plus className="h-5 w-5 text-white group-open:hidden" />
+                        <Minus className="h-5 w-5 text-white hidden group-open:block" />
                       </div>
-                      <div className="p-6">
-                        <div className="flex items-center gap-2 text-xs text-white/80 mb-2">
-                          {post.slug === "about-us" ? (
-                            <>
-                              <Users className="h-3 w-3" />
-                              <span>Our Founders</span>
-                            </>
-                          ) : (
-                            <>
-                              <Calendar className="h-3 w-3" />
-                              <span>{post.date}</span>
-                            </>
-                          )}
-                          <span className="mx-1">•</span>
-                          <Clock className="h-3 w-3" />
-                          <span>{post.readTime}</span>
-                        </div>
-                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-yellow-300 transition-colors">
-                          {post.title}
-                        </h3>
-                        <p className="text-white/90 text-sm mb-3 line-clamp-2">{post.excerpt}</p>
-                        <div className="flex items-center justify-between">
-                          <span className="inline-block bg-white/20 text-white text-xs px-2 py-1 rounded-full">
-                            {post.category}
-                          </span>
-                          <span className="text-white text-sm font-medium group-hover:underline">Read More →</span>
-                        </div>
-                      </div>
+                    </summary>
+                    <div className="p-6 pt-0 bg-white/10 backdrop-blur-sm">
+                      <p className="text-white/90">{faq.answer}</p>
                     </div>
-                  </Link>
-                )
-              })}
+                  </details>
+                </div>
+              ))}
+
+              {/* Still Have Questions */}
+              <div className="bg-gradient-to-br from-yellow-400 to-amber-500 text-blue-900 rounded-xl p-6 md:p-8 shadow-lg mt-12">
+                <h2 className="text-2xl font-bold mb-4">Still Have Questions?</h2>
+                <p className="mb-6">
+                  We're here to help! Contact us directly and we'll be happy to answer any additional questions you may
+                  have about our bouncy house rentals.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button className="bg-blue-700 hover:bg-blue-800 text-white">Contact Us</Button>
+                  <Button className="bg-white hover:bg-blue-50 text-blue-900">Call (920) 555-JUMP</Button>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -191,7 +167,10 @@ export default function BlogPage() {
 
       <footer className="w-full border-t bg-blue-900 text-white py-6 relative z-10">
         <div className="container flex flex-col items-center justify-center gap-4 px-4 md:px-6 md:flex-row md:justify-between">
-          <Logo variant="footer" />
+          <div className="flex items-center gap-2">
+            <Anchor className="h-6 w-6 text-yellow-400" />
+            <span className="text-lg font-bold text-yellow-400">Door County Bouncy House</span>
+          </div>
           <p className="text-center text-sm text-white/80 md:text-left">
             &copy; {new Date().getFullYear()} Door County Bouncy House. All rights reserved.
           </p>
