@@ -66,7 +66,7 @@ export default function MobileMenu() {
               { name: "Products", href: "/products", icon: <ShoppingBag className="h-5 w-5" /> },
               { name: "Blog", href: "/blog", icon: <BookOpen className="h-5 w-5" /> },
               { name: "FAQ", href: "/faq", icon: <HelpCircle className="h-5 w-5" /> },
-              { name: "Contact", href: "/#contact", icon: <Phone className="h-5 w-5" /> },
+              { name: "Contact", href: "/contact", icon: <Phone className="h-5 w-5" /> },
             ].map((item, index) => (
               <li
                 key={index}
@@ -88,8 +88,6 @@ export default function MobileMenu() {
               </li>
             ))}
           </ul>
-
-          {/* All buttons removed from mobile menu */}
         </nav>
       </div>
     </div>

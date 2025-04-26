@@ -382,7 +382,9 @@ export default function Home() {
                   </div>
                   <div className="flex items-center gap-2">
                     <Calendar className="h-5 w-5 text-white" />
-                    <span className="text-lg text-white wave-text">Available 7 days a week, April through October</span>
+                    <span className="text-lg text-white wave-text">
+                      Available 7 days a week, June through the end of August
+                    </span>
                   </div>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row mt-6">
