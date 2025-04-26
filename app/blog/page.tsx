@@ -28,7 +28,7 @@ export default function BlogPage() {
       author: "Door County Bouncy Team",
       readTime: "5 min read",
       category: "Party Planning",
-      image: "/placeholder.svg?height=600&width=1200&text=Game+Themed+Parties",
+      image: "/images/fortnite-obstacle-course.jpeg",
       color: "from-purple-500 to-indigo-600",
     },
     {
@@ -191,8 +191,8 @@ export default function BlogPage() {
                     </div>
                     <div className="relative h-80 md:h-auto">
                       <Image
-                        src="/placeholder.svg?height=600&width=1200&text=Game+Themed+Parties"
-                        alt="Game-themed birthday party with bouncy house"
+                        src="/images/fortnite-themed-bouncy-house.png"
+                        alt="Fortnite-themed bouncy house obstacle course for game-themed birthday parties"
                         fill
                         className="object-cover rounded-tr-xl rounded-br-xl md:rounded-bl-none md:rounded-tr-xl"
                       />

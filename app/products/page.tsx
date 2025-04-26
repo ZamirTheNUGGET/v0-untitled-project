@@ -12,7 +12,7 @@ export default function ProductsPage() {
       id: "obstacle-course",
       name: "Obstacle Course Bouncy Houses",
       description: "Challenge your guests with our exciting obstacle courses that provide hours of active fun!",
-      image: "/placeholder.svg?height=600&width=1200&text=Obstacle+Course+Bouncy+House",
+      image: "/images/fortnite-obstacle-course.jpeg",
       features: [
         "Multiple obstacles and challenges",
         "Perfect for competitive fun",
@@ -31,7 +31,7 @@ export default function ProductsPage() {
       id: "classic-bounce",
       name: "Classic Bouncy Houses",
       description: "Traditional bouncy castles perfect for birthday parties and smaller gatherings.",
-      image: "/placeholder.svg?height=400&width=600&text=Classic+Bouncy+House",
+      image: "/images/classic-bouncy-castle.png",
       features: [
         "Simple, classic design",
         "Perfect for younger children",
@@ -50,7 +50,7 @@ export default function ProductsPage() {
       id: "combo-bounce",
       name: "Combo Bouncy Houses",
       description: "Get the best of both worlds with our combo units featuring bouncing areas, slides, and more!",
-      image: "/images/bouncy-house-event.jpg",
+      image: "/images/carnival-tickets-bouncy-house.jpeg",
       features: [
         "Bounce area plus additional features",
         "Slides, basketball hoops, or climbing walls",
@@ -69,7 +69,7 @@ export default function ProductsPage() {
       id: "water-slides",
       name: "Water Slides & Splash Zones",
       description: "Beat the summer heat with our exciting water slides and splash bouncy houses!",
-      image: "/placeholder.svg?height=400&width=600&text=Water+Slide+Bouncy+House",
+      image: "/images/tropical-water-slide-bouncy-house.jpeg",
       features: [
         "Perfect for hot summer days",
         "Slides with splash pools",
@@ -82,6 +82,26 @@ export default function ProductsPage() {
         { name: "Single Lane Slide", dimensions: "25ft x 12ft", capacity: "6-8 children" },
         { name: "Double Lane Slide", dimensions: "30ft x 15ft", capacity: "8-10 children" },
         { name: "Splash Zone Combo", dimensions: "25ft x 20ft", capacity: "10-12 children" },
+      ],
+    },
+    {
+      id: "themed-bounce",
+      name: "Themed Bouncy Houses",
+      description:
+        "Make your event extra special with our themed bouncy houses featuring popular characters and designs!",
+      image: "/images/ninja-themed-bouncy-house.jpeg",
+      features: [
+        "Exciting character themes",
+        "Visually appealing designs",
+        "Perfect for themed parties",
+        "Memorable photo opportunities",
+        "Kids' favorite characters",
+      ],
+      color: "from-purple-500 to-purple-600",
+      sizes: [
+        { name: "Ninja Adventure", dimensions: "15ft x 15ft", capacity: "6-8 children" },
+        { name: "Princess Castle", dimensions: "15ft x 15ft", capacity: "6-8 children" },
+        { name: "Superhero Headquarters", dimensions: "18ft x 15ft", capacity: "8-10 children" },
       ],
     },
   ]
@@ -246,7 +266,7 @@ export default function ProductsPage() {
                 </div>
                 <div className="relative h-64 md:h-auto rounded-lg overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=400&width=600&text=Happy+Bouncing+Kids"
+                    src="/images/bouncy-house-hero.jpg"
                     alt="Happy children enjoying a bouncy house"
                     fill
                     className="object-cover rounded-lg"

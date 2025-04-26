@@ -84,15 +84,17 @@ export default function GameThemedPartiesPage() {
                 </div>
                 <div className="relative w-full h-[400px] md:h-[500px] border-t-4 border-white/30">
                   <Image
-                    src="/placeholder.svg?height=600&width=1200&text=Game+Themed+Parties"
-                    alt="Game-themed birthday party with bouncy house"
+                    src="/images/fortnite-obstacle-course.jpeg"
+                    alt="Fortnite-themed bouncy house obstacle course - perfect for game-themed birthday parties"
                     fill
                     className="object-cover"
                     priority
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-indigo-900/80 to-transparent p-4 md:p-6">
                     <div className="text-white text-center">
-                      <p className="text-lg font-bold">Create unforgettable themed celebrations with bouncy houses!</p>
+                      <p className="text-lg font-bold">
+                        Fortnite-themed bouncy houses bring video games to life for unforgettable celebrations!
+                      </p>
                     </div>
                   </div>
                 </div>
