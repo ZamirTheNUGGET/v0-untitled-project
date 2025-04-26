@@ -189,57 +189,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="gallery" className="w-full py-12 md:py-24 bg-cyan-500/40 backdrop-blur-sm relative z-10">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-yellow-400 px-3 py-1 text-sm text-blue-900 font-bold">
-                  Our Bouncy Houses
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white drop-shadow-md wave-text">
-                  Explore Our Colorful Collection
-                </h2>
-                <p className="max-w-[900px] text-white text-opacity-90 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed wave-text">
-                  Take a look at our range of bouncy houses, slides, and obstacle courses!
-                </p>
-              </div>
-            </div>
-            <div className="mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
-              {[
-                { name: "Princess Castle", color: "bg-pink-500" },
-                { name: "Superhero Bounce", color: "bg-blue-600" },
-                { name: "Jungle Adventure", color: "bg-green-500" },
-                { name: "Pirate Ship", color: "bg-purple-600" },
-                { name: "Sports Arena", color: "bg-orange-500" },
-                { name: "Rainbow Slide", color: "bg-red-500" },
-              ].map((bouncy, index) => (
-                <div
-                  key={index}
-                  className="group relative overflow-hidden rounded-lg shadow-lg transition-all hover:shadow-xl border-4 border-white"
-                >
-                  <Image
-                    src={`/placeholder-graphic.png?key=o840u&height=300&width=400&text=${bouncy.name}`}
-                    alt={bouncy.name}
-                    width={400}
-                    height={300}
-                    className="aspect-[4/3] w-full object-cover transition-transform group-hover:scale-105"
-                  />
-                  <div
-                    className={`absolute inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent p-4 opacity-100`}
-                  >
-                    <div>
-                      <h3 className="text-xl font-bold text-white wave-text">{bouncy.name}</h3>
-                      <Button className="mt-2 bg-white/20 text-white backdrop-blur-sm hover:bg-white/30">
-                        View Details
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section id="pricing" className="w-full py-12 md:py-24 bg-blue-600/40 backdrop-blur-sm relative z-10">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
@@ -293,72 +242,23 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="blog" className="w-full py-12 md:py-24 bg-blue-500/40 backdrop-blur-sm relative z-10">
-          <div className="container px-4 md:px-6">
-            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
-              {/* Image on the left */}
-              <div className="relative mx-auto w-full max-w-[500px] overflow-hidden rounded-xl">
-                <Image
-                  src="/placeholder.svg?height=400&width=600&text=Bouncy+House+Blog"
-                  alt="Colorful bouncy house with multiple yellow slides"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto object-cover rounded-xl shadow-lg border-4 border-white"
-                />
-              </div>
-              {/* Text on the right */}
-              <div className="space-y-4">
-                <div className="inline-block rounded-lg bg-yellow-400 px-3 py-1 text-sm text-blue-900 font-bold">
-                  Our Blog
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white drop-shadow-md wave-text">
-                  Bouncy House Adventures
-                </h2>
-                <p className="max-w-[600px] text-white text-opacity-90 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed wave-text">
-                  Read about our latest events, tips, and bouncy house fun! Our blog is filled with helpful information
-                  for planning your next event.
-                </p>
-                <div className="space-y-4">
-                  {[
-                    {
-                      title: "Top 5 Bouncy House Safety Tips",
-                      date: "June 15, 2025",
-                    },
-                    {
-                      title: "Planning the Perfect Bouncy House Party",
-                      date: "May 22, 2025",
-                    },
-                    {
-                      title: "Why Bouncy Houses Are Great for Child Development",
-                      date: "April 10, 2025",
-                    },
-                  ].map((post, index) => (
-                    <div key={index} className="flex flex-col">
-                      <h3 className="text-lg font-bold text-white wave-text">{post.title}</h3>
-                      <p className="text-sm text-white/80">{post.date}</p>
-                    </div>
-                  ))}
-                </div>
-                <Link href="/blog">
-                  <Button className="mt-4 bg-blue-700 hover:bg-blue-800 text-white font-bold">Visit Our Blog</Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section id="contact" className="w-full py-12 md:py-24 bg-cyan-500/40 backdrop-blur-sm relative z-10">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               {/* Image on the left */}
               <div className="relative mx-auto w-full max-w-[500px] overflow-hidden rounded-xl order-2 lg:order-1">
                 <Image
-                  src="/placeholder.svg?height=400&width=600&text=Contact+Us"
-                  alt="Contact Door County Bouncy House"
+                  src="/images/zamir-zohran-poolside.jpeg"
+                  alt="Zamir and Zohran Overbeck - Door County Bouncy House Founders"
                   width={600}
                   height={400}
                   className="w-full h-auto object-cover rounded-xl shadow-lg border-4 border-white"
                 />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-blue-900/80 to-transparent p-4">
+                  <p className="text-white text-center text-sm font-medium">
+                    Zamir & Zohran - Door County Bouncy House Founders
+                  </p>
+                </div>
               </div>
               {/* Text on the right */}
               <div className="space-y-4 order-1 lg:order-2">
