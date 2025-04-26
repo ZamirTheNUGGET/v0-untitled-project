@@ -89,7 +89,7 @@ export default function Home() {
               {/* Image now on the left */}
               <div className="relative mx-auto w-full max-w-[500px] overflow-hidden rounded-xl order-2 lg:order-1">
                 <Image
-                  src="/images/bouncy-house-hero.png"
+                  src="/images/bouncy-house-hero.jpg"
                   alt="Colorful bouncy castle with slide"
                   width={800}
                   height={600}
@@ -246,7 +246,7 @@ export default function Home() {
               {/* Image on the left */}
               <div className="relative mx-auto w-full max-w-[500px] overflow-hidden rounded-xl">
                 <Image
-                  src="/images/bouncy-house-package.png"
+                  src="/images/bouncy-house-package.jpg"
                   alt="Castle bouncy house with slide and splash pool"
                   width={600}
                   height={400}
@@ -299,7 +299,7 @@ export default function Home() {
               {/* Image on the left */}
               <div className="relative mx-auto w-full max-w-[500px] overflow-hidden rounded-xl">
                 <Image
-                  src="/images/bouncy-house-blog.png"
+                  src="/placeholder.svg?height=400&width=600&text=Bouncy+House+Blog"
                   alt="Colorful bouncy house with multiple yellow slides"
                   width={600}
                   height={400}

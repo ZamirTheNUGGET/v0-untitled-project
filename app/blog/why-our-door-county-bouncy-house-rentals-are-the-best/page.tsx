@@ -84,7 +84,7 @@ export default function BestRentalsPage() {
                 </div>
                 <div className="relative w-full h-[400px] md:h-[500px] border-t-4 border-white/30">
                   <Image
-                    src="/images/bouncy-obstacle-course.png"
+                    src="/placeholder.svg?height=600&width=1200&text=Obstacle+Course+Bouncy+House"
                     alt="Colorful obstacle course bouncy house with castle towers"
                     fill
                     className="object-cover"

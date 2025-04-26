@@ -12,7 +12,7 @@ export default function ProductsPage() {
       id: "obstacle-course",
       name: "Obstacle Course Bouncy Houses",
       description: "Challenge your guests with our exciting obstacle courses that provide hours of active fun!",
-      image: "/images/bouncy-obstacle-course.png",
+      image: "/placeholder.svg?height=600&width=1200&text=Obstacle+Course+Bouncy+House",
       features: [
         "Multiple obstacles and challenges",
         "Perfect for competitive fun",
@@ -50,7 +50,7 @@ export default function ProductsPage() {
       id: "combo-bounce",
       name: "Combo Bouncy Houses",
       description: "Get the best of both worlds with our combo units featuring bouncing areas, slides, and more!",
-      image: "/images/bouncy-house-event.png",
+      image: "/images/bouncy-house-event.jpg",
       features: [
         "Bounce area plus additional features",
         "Slides, basketball hoops, or climbing walls",

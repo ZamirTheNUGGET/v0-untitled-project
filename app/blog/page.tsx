@@ -20,6 +20,18 @@ export default function BlogPage() {
       color: "from-blue-600 to-blue-800",
     },
     {
+      slug: "level-up-your-childs-birthday-with-game-themed-parties",
+      title: "Level Up Your Child's Birthday: Epic Game-Themed Party Ideas",
+      excerpt:
+        "Transform your child's birthday with Minecraft, Fortnite, Among Us & Roblox themed parties paired with our exciting bouncy house rentals for an unforgettable celebration.",
+      date: "July 5, 2025",
+      author: "Door County Bouncy Team",
+      readTime: "5 min read",
+      category: "Party Planning",
+      image: "/placeholder.svg?height=600&width=1200&text=Game+Themed+Parties",
+      color: "from-purple-500 to-indigo-600",
+    },
+    {
       slug: "best-event-ideas-for-a-door-county-bouncy-house",
       title: "Best Event Ideas for a Door County Bouncy House",
       excerpt:
@@ -28,7 +40,7 @@ export default function BlogPage() {
       author: "Door County Bouncy Team",
       readTime: "4 min read",
       category: "Event Planning",
-      image: "/images/bouncy-house-event.png",
+      image: "/images/bouncy-house-event.jpg",
       color: "from-green-500 to-green-600",
     },
     {
@@ -153,10 +165,48 @@ export default function BlogPage() {
               </Link>
             </div>
 
+            {/* Featured Game-Themed Party Post */}
+            <div className="mb-12">
+              <Link href="/blog/level-up-your-childs-birthday-with-game-themed-parties" className="block group">
+                <div className="bg-gradient-to-br from-purple-500 to-indigo-600 text-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.01]">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="p-6 md:p-8 flex flex-col justify-center">
+                      <div className="flex items-center gap-2 text-xs text-white/80 mb-2">
+                        <Calendar className="h-4 w-4" />
+                        <span>July 5, 2025</span>
+                        <span className="mx-1">•</span>
+                        <Clock className="h-4 w-4" />
+                        <span>5 min read</span>
+                      </div>
+                      <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-yellow-300 transition-colors">
+                        Level Up Your Child's Birthday: Epic Game-Themed Party Ideas
+                      </h2>
+                      <p className="text-white/90 mb-4">
+                        Transform your child's birthday with Minecraft, Fortnite, Among Us & Roblox themed parties
+                        paired with our exciting bouncy house rentals for an unforgettable celebration.
+                      </p>
+                      <span className="text-white text-sm font-medium group-hover:underline self-start mt-auto">
+                        Read More →
+                      </span>
+                    </div>
+                    <div className="relative h-80 md:h-auto">
+                      <Image
+                        src="/placeholder.svg?height=600&width=1200&text=Game+Themed+Parties"
+                        alt="Game-themed birthday party with bouncy house"
+                        fill
+                        className="object-cover rounded-tr-xl rounded-br-xl md:rounded-bl-none md:rounded-tr-xl"
+                      />
+                      <div className="absolute inset-0 border-4 border-purple-300 rounded-tr-xl rounded-br-xl md:rounded-bl-none md:rounded-tr-xl opacity-70"></div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </div>
+
             {/* Other Blog Posts Grid */}
             <h2 className="text-2xl font-bold text-white mb-6">More Articles</h2>
             <div className="grid gap-6 md:grid-cols-2">
-              {blogPosts.slice(1).map((post, index) => {
+              {blogPosts.slice(2).map((post, index) => {
                 return (
                   <Link key={post.slug} href={`/blog/${post.slug}`} className="block group">
                     <div
