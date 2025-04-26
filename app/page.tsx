@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Calendar, MapPin, Phone, ShoppingBag, BookOpen, LogIn, UserPlus, Star, Users, HelpCircle } from "lucide-react"
+import { Calendar, MapPin, Phone, ShoppingBag, BookOpen, Star, Users, HelpCircle } from "lucide-react"
 import MobileMenu from "@/components/mobile-menu"
 import Logo from "@/components/logo"
 
@@ -75,17 +75,7 @@ export default function Home() {
                 </Link>
               ))}
             </div>
-            <div className="flex items-center ml-4 space-x-2">
-              <Button className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold">Book Now</Button>
-              <Button className="bg-blue-700 hover:bg-blue-800 text-white font-bold">
-                <UserPlus className="mr-2 h-4 w-4" />
-                Sign Up
-              </Button>
-              <Button className="bg-blue-700 hover:bg-blue-800 text-white font-bold">
-                <LogIn className="mr-2 h-4 w-4" />
-                Login
-              </Button>
-            </div>
+            {/* Navigation buttons removed */}
           </nav>
 
           {/* Mobile Menu */}
@@ -99,11 +89,12 @@ export default function Home() {
               {/* Image now on the left */}
               <div className="relative mx-auto w-full max-w-[500px] overflow-hidden rounded-xl order-2 lg:order-1">
                 <Image
-                  src="/placeholder.svg?height=600&width=800"
-                  alt="Colorful bouncy castle with children playing"
+                  src="/images/bouncy-house-hero.png"
+                  alt="Colorful bouncy castle with slide"
                   width={800}
                   height={600}
                   className="w-full h-auto object-cover rounded-xl shadow-lg border-4 border-white"
+                  priority
                 />
               </div>
               {/* Text now on the right */}
@@ -255,8 +246,8 @@ export default function Home() {
               {/* Image on the left */}
               <div className="relative mx-auto w-full max-w-[500px] overflow-hidden rounded-xl">
                 <Image
-                  src="/placeholder.svg?height=400&width=600&text=Packages"
-                  alt="Bouncy house packages"
+                  src="/images/bouncy-house-package.png"
+                  alt="Castle bouncy house with slide and splash pool"
                   width={600}
                   height={400}
                   className="w-full h-auto object-cover rounded-xl shadow-lg border-4 border-white"
@@ -308,8 +299,8 @@ export default function Home() {
               {/* Image on the left */}
               <div className="relative mx-auto w-full max-w-[500px] overflow-hidden rounded-xl">
                 <Image
-                  src="/placeholder.svg?height=400&width=600&text=Blog"
-                  alt="Bouncy house blog"
+                  src="/images/bouncy-house-blog.png"
+                  alt="Colorful bouncy house with multiple yellow slides"
                   width={600}
                   height={400}
                   className="w-full h-auto object-cover rounded-xl shadow-lg border-4 border-white"

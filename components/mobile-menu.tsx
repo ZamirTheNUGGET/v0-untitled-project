@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { X, Menu, ShoppingBag, BookOpen, Phone, LogIn, UserPlus, HelpCircle } from "lucide-react"
+import { X, Menu, ShoppingBag, BookOpen, Phone, HelpCircle, Home } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Logo from "./logo"
 
@@ -62,6 +62,7 @@ export default function MobileMenu() {
         <nav className="container mx-auto px-4 py-8">
           <ul className="space-y-6">
             {[
+              { name: "Home", href: "/", icon: <Home className="h-5 w-5" /> },
               { name: "Products", href: "/products", icon: <ShoppingBag className="h-5 w-5" /> },
               { name: "Blog", href: "/blog", icon: <BookOpen className="h-5 w-5" /> },
               { name: "FAQ", href: "/faq", icon: <HelpCircle className="h-5 w-5" /> },
@@ -88,40 +89,7 @@ export default function MobileMenu() {
             ))}
           </ul>
 
-          <div
-            className="mt-12 space-y-4"
-            style={{
-              transitionDelay: "450ms",
-              transform: isOpen ? "translateX(0)" : "translateX(-20px)",
-              opacity: isOpen ? 1 : 0,
-              transition: "transform 300ms ease-out, opacity 300ms ease-out",
-            }}
-          >
-            <Button
-              className="w-full bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold text-lg"
-              onClick={handleMenuItemClick}
-            >
-              Book Now
-            </Button>
-            <div className="grid grid-cols-2 gap-4">
-              <Button
-                variant="outline"
-                className="w-full border-white bg-white/90 text-black hover:bg-white font-bold"
-                onClick={handleMenuItemClick}
-              >
-                <UserPlus className="mr-2 h-4 w-4 text-blue-900" />
-                Sign Up
-              </Button>
-              <Button
-                variant="outline"
-                className="w-full border-white bg-white/90 text-black hover:bg-white font-bold"
-                onClick={handleMenuItemClick}
-              >
-                <LogIn className="mr-2 h-4 w-4 text-blue-900" />
-                Login
-              </Button>
-            </div>
-          </div>
+          {/* All buttons removed from mobile menu */}
         </nav>
       </div>
     </div>

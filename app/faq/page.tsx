@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Anchor, ArrowLeft, ShoppingBag, BookOpen, LogIn, UserPlus, Phone, HelpCircle, Plus, Minus } from "lucide-react"
+import { Anchor, ArrowLeft, Home, ShoppingBag, BookOpen, Phone, HelpCircle, Plus, Minus } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/mobile-menu"
 
@@ -24,6 +24,7 @@ export default function FAQPage() {
           <nav className="hidden md:flex items-center">
             <div className="flex space-x-1 bg-blue-700/50 backdrop-blur-sm p-1 rounded-full">
               {[
+                { name: "Home", href: "/", icon: <Home className="h-4 w-4" /> },
                 { name: "Products", href: "/products", icon: <ShoppingBag className="h-4 w-4" /> },
                 { name: "Blog", href: "/blog", icon: <BookOpen className="h-4 w-4" /> },
                 { name: "FAQ", href: "/faq", icon: <HelpCircle className="h-4 w-4" /> },
@@ -42,17 +43,6 @@ export default function FAQPage() {
                   <span className="wave-text relative z-10">{item.name}</span>
                 </Link>
               ))}
-            </div>
-            <div className="flex items-center ml-4 space-x-2">
-              <Button className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold">Book Now</Button>
-              <Button variant="outline" className="border-white text-white hover:bg-white/20">
-                <UserPlus className="mr-2 h-4 w-4" />
-                Sign Up
-              </Button>
-              <Button variant="outline" className="border-white text-white hover:bg-white/20">
-                <LogIn className="mr-2 h-4 w-4" />
-                Login
-              </Button>
             </div>
           </nav>
 

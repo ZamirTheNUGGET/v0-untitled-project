@@ -1,18 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import {
-  Calendar,
-  Clock,
-  ShoppingBag,
-  BookOpen,
-  LogIn,
-  UserPlus,
-  Phone,
-  HelpCircle,
-  ArrowLeft,
-  Users,
-} from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Calendar, Clock, ShoppingBag, BookOpen, Phone, HelpCircle, ArrowLeft, Users, Home } from "lucide-react"
 import MobileMenu from "@/components/mobile-menu"
 import Logo from "@/components/logo"
 
@@ -28,7 +16,7 @@ export default function BlogPage() {
       author: "Zamir & Zohran Overbeck",
       readTime: "3 min read",
       category: "Our Story",
-      image: "/placeholder.svg?height=400&width=800&text=About+Us",
+      image: "/images/zamir-zohran-poolside.jpeg",
       color: "from-blue-600 to-blue-800",
     },
     {
@@ -40,7 +28,7 @@ export default function BlogPage() {
       author: "Door County Bouncy Team",
       readTime: "4 min read",
       category: "Event Planning",
-      image: "/placeholder.svg?height=400&width=800&text=Event+Ideas",
+      image: "/images/bouncy-house-event.png",
       color: "from-green-500 to-green-600",
     },
     {
@@ -52,7 +40,7 @@ export default function BlogPage() {
       author: "Door County Bouncy Team",
       readTime: "3 min read",
       category: "Rentals",
-      image: "/placeholder.svg?height=400&width=800&text=Best+Rentals",
+      image: "/images/bouncy-obstacle-course.png",
       color: "from-yellow-500 to-amber-600",
     },
   ]
@@ -74,6 +62,7 @@ export default function BlogPage() {
           <nav className="hidden md:flex items-center">
             <div className="flex space-x-1 bg-blue-700/50 backdrop-blur-sm p-1 rounded-full">
               {[
+                { name: "Home", href: "/", icon: <Home className="h-4 w-4" /> },
                 { name: "Products", href: "/products", icon: <ShoppingBag className="h-4 w-4" /> },
                 { name: "Blog", href: "/blog", icon: <BookOpen className="h-4 w-4" /> },
                 { name: "FAQ", href: "/faq", icon: <HelpCircle className="h-4 w-4" /> },
@@ -92,17 +81,6 @@ export default function BlogPage() {
                   <span className="wave-text relative z-10">{item.name}</span>
                 </Link>
               ))}
-            </div>
-            <div className="flex items-center ml-4 space-x-2">
-              <Button className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold">Book Now</Button>
-              <Button variant="outline" className="border-white text-white hover:bg-white/20">
-                <UserPlus className="mr-2 h-4 w-4" />
-                Sign Up
-              </Button>
-              <Button variant="outline" className="border-white text-white hover:bg-white/20">
-                <LogIn className="mr-2 h-4 w-4" />
-                Login
-              </Button>
             </div>
           </nav>
 
@@ -135,9 +113,50 @@ export default function BlogPage() {
               </div>
             </div>
 
-            {/* Blog Post Grid */}
-            <div className="grid gap-6 md:grid-cols-3">
-              {blogPosts.map((post, index) => {
+            {/* Featured About Us Section - Made larger and more prominent */}
+            <div className="mb-12">
+              <Link href="/blog/about-us" className="block group">
+                <div className="bg-gradient-to-br from-blue-600 to-blue-800 text-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.01]">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="p-6 md:p-8 flex flex-col justify-center">
+                      <div className="flex items-center gap-2 text-xs text-white/80 mb-2">
+                        <Users className="h-4 w-4" />
+                        <span>Our Founders</span>
+                        <span className="mx-1">•</span>
+                        <Clock className="h-4 w-4" />
+                        <span>3 min read</span>
+                      </div>
+                      <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-yellow-300 transition-colors">
+                        About Us: We Bring The Bounce So You Can Bring The Fun!
+                      </h2>
+                      <p className="text-white/90 mb-4">
+                        Welcome to Door County Bouncy House! We're Zamir and Zohran Overbeck. We are two brothers on a
+                        mission to turn ordinary gatherings into unforgettable celebrations in Door County with our
+                        bouncy houses.
+                      </p>
+                      <span className="text-white text-sm font-medium group-hover:underline self-start mt-auto">
+                        Read Our Story →
+                      </span>
+                    </div>
+                    <div className="relative h-80 md:h-auto">
+                      <Image
+                        src="/images/zamir-zohran-poolside.jpeg"
+                        alt="Zamir and Zohran Overbeck - Door County Bouncy House Founders"
+                        fill
+                        className="object-contain rounded-tr-xl rounded-br-xl md:rounded-bl-none md:rounded-tr-xl"
+                        style={{ objectPosition: "center 30%" }}
+                      />
+                      <div className="absolute inset-0 border-4 border-yellow-400 rounded-tr-xl rounded-br-xl md:rounded-bl-none md:rounded-tr-xl opacity-70"></div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </div>
+
+            {/* Other Blog Posts Grid */}
+            <h2 className="text-2xl font-bold text-white mb-6">More Articles</h2>
+            <div className="grid gap-6 md:grid-cols-2">
+              {blogPosts.slice(1).map((post, index) => {
                 return (
                   <Link key={post.slug} href={`/blog/${post.slug}`} className="block group">
                     <div
@@ -154,17 +173,8 @@ export default function BlogPage() {
                       </div>
                       <div className="p-6">
                         <div className="flex items-center gap-2 text-xs text-white/80 mb-2">
-                          {post.slug === "about-us" ? (
-                            <>
-                              <Users className="h-3 w-3" />
-                              <span>Our Founders</span>
-                            </>
-                          ) : (
-                            <>
-                              <Calendar className="h-3 w-3" />
-                              <span>{post.date}</span>
-                            </>
-                          )}
+                          <Calendar className="h-3 w-3" />
+                          <span>{post.date}</span>
                           <span className="mx-1">•</span>
                           <Clock className="h-3 w-3" />
                           <span>{post.readTime}</span>

@@ -1,11 +1,11 @@
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowLeft, ShoppingBag, BookOpen, Phone, HelpCircle, Home } from "lucide-react"
+import { ArrowLeft, ShoppingBag, BookOpen, Phone, HelpCircle, Calendar, Clock, Tag, Home } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/mobile-menu"
 import Logo from "@/components/logo"
 
-export default function AboutUsPage() {
+export default function BestEventIdeasPage() {
   return (
     <div className="flex min-h-screen flex-col relative overflow-hidden bg-gradient-to-b from-sky-400 via-cyan-300 to-blue-500">
       {/* Animated Waves Background */}
@@ -62,34 +62,37 @@ export default function AboutUsPage() {
                 <span>Back to Blog</span>
               </Link>
 
-              {/* Featured Image - Larger and more prominent with natural background */}
-              <div className="bg-gradient-to-br from-blue-600 to-blue-800 text-white rounded-xl overflow-hidden shadow-xl mb-8">
+              {/* Featured Image */}
+              <div className="bg-gradient-to-br from-green-500 to-green-600 text-white rounded-xl overflow-hidden shadow-xl mb-8">
                 <div className="p-6 md:p-8">
+                  <div className="flex flex-wrap items-center gap-3 text-sm text-white/80 mb-4">
+                    <span className="inline-flex items-center gap-1">
+                      <Calendar className="h-4 w-4" />
+                      May 10, 2025
+                    </span>
+                    <span className="inline-flex items-center gap-1">
+                      <Clock className="h-4 w-4" />4 min read
+                    </span>
+                    <span className="inline-flex items-center gap-1">
+                      <Tag className="h-4 w-4" />
+                      Event Planning
+                    </span>
+                  </div>
                   <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                    About Us: We Bring The Bounce So You Can Bring The Fun!
+                    Best Event Ideas for a Door County Bouncy House
                   </h1>
                 </div>
-
-                {/* Larger image container with better focus on faces */}
-                <div className="relative w-full h-[500px] md:h-[600px] border-t-4 border-yellow-400">
+                <div className="relative w-full h-[400px] md:h-[500px] border-t-4 border-white/30">
                   <Image
-                    src="/images/zamir-zohran-poolside.jpeg"
-                    alt="Zamir and Zohran Overbeck - Door County Bouncy House Founders"
+                    src="/images/bouncy-house-event.png"
+                    alt="Colorful bouncy houses set up for an outdoor event"
                     fill
-                    className="object-contain"
-                    style={{ objectPosition: "center 30%" }}
+                    className="object-cover"
                     priority
                   />
-
-                  {/* Caption with specific names */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-blue-900/80 to-transparent p-4 md:p-6">
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-green-900/80 to-transparent p-4 md:p-6">
                     <div className="text-white text-center">
-                      <p className="text-xl font-bold">Zamir & Zohran Overbeck</p>
-                      <p className="text-md mt-1">
-                        <span className="bg-blue-700/70 px-2 py-1 rounded-full mr-2">Zamir (left)</span>
-                        <span className="bg-blue-700/70 px-2 py-1 rounded-full">Zohran (right)</span>
-                      </p>
-                      <p className="text-sm mt-2">Founders of Door County Bouncy House</p>
+                      <p className="text-lg font-bold">Perfect for any Door County celebration</p>
                     </div>
                   </div>
                 </div>
@@ -99,66 +102,71 @@ export default function AboutUsPage() {
               <div className="bg-blue-50 rounded-xl p-6 md:p-8 shadow-lg mb-8">
                 <div className="prose prose-blue max-w-none">
                   <p className="text-lg">
-                    Welcome to Door County Bouncy House! We're Zamir and Zohran Overbeck. We are two brothers on a
-                    mission to turn ordinary gatherings into unforgettable celebrations in Door County with our bouncy
-                    houses.
-                  </p>
-
-                  <h2 className="text-2xl font-bold text-blue-800 mt-8 mb-4">Our Story</h2>
-                  <p>
-                    Our journey began at a birthday party when we wanted to rent a bouncy house for our own birthdays.
-                    The nearest company was all the way in Green Bay. That's when we had an idea: why not bring the fun
-                    closer to home?
-                  </p>
-                  <p>
-                    We started Door County Bouncy Houses so families right here in Door County could enjoy the same
-                    excitement and happiness we loved as kids.
-                  </p>
-                  <p>
-                    Whether it's a birthday bash, a community festival, or a backyard family reunion, we believe every
-                    kid and adult deserves a chance to laugh, jump, and make joyful memories together.
+                    Door County is the perfect backdrop for unforgettable celebrations, from Lake Michigan or from the
+                    Bayside of the county. Here are some of the best occasions to rent a{" "}
+                    <strong>bouncy house in Door County</strong>:
                   </p>
 
                   <h2 className="text-2xl font-bold text-blue-800 mt-8 mb-4">
-                    Our Mission: We Bring The Bounce So You Can Bring The Fun!
+                    🎉 Rent a Bounce House for a Birthday Party
                   </h2>
-
-                  <h3 className="text-xl font-bold text-blue-700 mt-6 mb-3">Why Choose Door County Bouncy Houses</h3>
-                  <ul className="list-disc pl-6 space-y-2">
-                    <li>
-                      <strong>Safety First:</strong> We carefully inspect and sanitize all our equipment to keep every
-                      event safe and worry-free.
-                    </li>
-                    <li>
-                      <strong>Plenty of Options:</strong> From classic castles to creative party games, we offer a
-                      variety of rentals to fit any theme or occasion.
-                    </li>
-                    <li>
-                      <strong>Service with Heart:</strong> As a family-run business, we treat every customer like a
-                      neighbor…well, 'cause we probably are your neighbor! Plus, it's all hassle-free. We take care of
-                      the delivery, setup, and takedown so you can focus on the fun.
-                    </li>
-                  </ul>
-
-                  <h2 className="text-2xl font-bold text-blue-800 mt-8 mb-4">Serving Door County and Beyond</h2>
                   <p>
-                    We'll deliver and set up bouncy houses all across Door County, from Brussels, Sturgeon Bay
-                    Jacksonport, Baileys Harbor, Egg Harbor, Fish Creek, Sister Bay, Ellison Bay, to the top of the
-                    Thumb. Wherever your celebration is, we'll bring the bounce so you can bring the fun!
-                  </p>
-                  <p>
-                    When you book with us, you're supporting a local family business—and helping two brothers chase
-                    their dream of spreading joy throughout our community.
+                    Looking for a way to make your child's birthday party unforgettable? A bouncy house is guaranteed to
+                    keep kids entertained for hours and creates memories they'll cherish for years. We deliver the fun
+                    right to your Door County location—just add cake and laughter!
                   </p>
 
-                  <p className="text-lg font-bold text-blue-800 mt-8">Thanks for visiting our site!</p>
-                  <p className="text-lg font-bold text-blue-800">Zamir & Zohran</p>
+                  <h2 className="text-2xl font-bold text-blue-800 mt-8 mb-4">
+                    👨‍👩‍👧‍👦 Make Your Family Reunion or Neighborhood Gathering Extra Fun
+                  </h2>
+                  <p>
+                    Turn your next family reunion or neighborhood get-together into a celebration everyone will
+                    remember. Our Door County Bouncy Houses keep the kids busy and happy, so adults can relax,
+                    reconnect, and enjoy the day.
+                  </p>
+
+                  <h2 className="text-2xl font-bold text-blue-800 mt-8 mb-4">🎪 Festivals & Community Gatherings</h2>
+                  <p>
+                    Want to make your festival booth or community event the hottest spot in Door County? Rent a bouncy
+                    house! Kids can't resist the fun, making it a great way to attract families and create a lively
+                    atmosphere at any gathering.
+                  </p>
+
+                  <h2 className="text-2xl font-bold text-blue-800 mt-8 mb-4">
+                    🥳 Add Excitement to Church Picnics and School Fundraisers
+                  </h2>
+                  <p>
+                    Looking for a way to boost the energy at your next church picnic or school fundraiser? A bouncy
+                    house is the perfect addition—bringing color, excitement, and joy to every attendee, young and old.
+                  </p>
+
+                  <h2 className="text-2xl font-bold text-blue-800 mt-8 mb-4">🏖️ Beach Parties and Lakeside Events</h2>
+                  <p>
+                    Door County's beautiful beaches and lakeshores make the perfect setting for summer celebrations. Add
+                    a bouncy house to your beach party or lakeside event for an extra splash of fun that will delight
+                    guests of all ages.
+                  </p>
+
+                  <h2 className="text-2xl font-bold text-blue-800 mt-8 mb-4">🍎 Fall Harvest Festivals</h2>
+                  <p>
+                    Door County is famous for its fall harvest celebrations. Whether it's an apple orchard event or a
+                    pumpkin patch festival, a colorful bouncy house adds an extra element of excitement that complements
+                    the seasonal fun.
+                  </p>
+
+                  <div className="bg-green-100 p-6 rounded-lg mt-8 border-l-4 border-green-500">
+                    <h3 className="text-xl font-bold text-green-800 mb-2">Ready to bounce into your next event?</h3>
+                    <p className="mb-0">
+                      Contact Door County Bouncy House today to reserve the perfect inflatable for your upcoming
+                      celebration!
+                    </p>
+                  </div>
                 </div>
               </div>
 
               {/* Call to Action */}
               <div className="bg-gradient-to-br from-yellow-400 to-yellow-500 text-blue-900 rounded-xl p-6 md:p-8 shadow-lg">
-                <h2 className="text-2xl font-bold mb-4">Ready to Bounce?</h2>
+                <h2 className="text-2xl font-bold mb-4">Ready to Make Your Event Unforgettable?</h2>
                 <p className="mb-6">Contact us today to book a bouncy house for your next event in Door County!</p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button className="bg-blue-700 hover:bg-blue-800 text-white">Book Now</Button>
