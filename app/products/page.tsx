@@ -12,7 +12,7 @@ export default function ProductsPage() {
       id: "obstacle-course",
       name: "Obstacle Course Bouncy Houses",
       description: "Challenge your guests with our exciting obstacle courses that provide hours of active fun!",
-      image: "/images/fortnite-obstacle-course.jpeg",
+      image: "https://doorcountybouncyhouse.com/images/fortnite-obstacle-course.jpeg",
       features: [
         "Multiple obstacles and challenges",
         "Perfect for competitive fun",
@@ -69,7 +69,7 @@ export default function ProductsPage() {
       id: "water-slides",
       name: "Water Slides & Splash Zones",
       description: "Beat the summer heat with our exciting water slides and splash bouncy houses!",
-      image: "/images/tropical-water-slide-bouncy-house.jpeg",
+      image: "https://doorcountybouncyhouse.com/images/tropical-water-slide-bouncy-house.jpeg",
       features: [
         "Perfect for hot summer days",
         "Slides with splash pools",
@@ -89,7 +89,7 @@ export default function ProductsPage() {
       name: "Themed Bouncy Houses",
       description:
         "Make your event extra special with our themed bouncy houses featuring popular characters and designs!",
-      image: "/images/ninja-themed-bouncy-house.jpeg",
+      image: "https://doorcountybouncyhouse.com/images/ninja-themed-bouncy-house.jpeg",
       features: [
         "Exciting character themes",
         "Visually appealing designs",
@@ -266,7 +266,7 @@ export default function ProductsPage() {
                 </div>
                 <div className="relative h-64 md:h-auto rounded-lg overflow-hidden">
                   <Image
-                    src="/images/bouncy-house-hero.jpg"
+                    src="https://doorcountybouncyhouse.com/images/bouncy-house-hero.jpg"
                     alt="Happy children enjoying a bouncy house"
                     fill
                     className="object-cover rounded-lg"

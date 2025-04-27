@@ -73,7 +73,7 @@ export default function AboutUsPage() {
                 {/* Larger image container with better focus on faces */}
                 <div className="relative w-full h-[500px] md:h-[600px] border-t-4 border-yellow-400">
                   <Image
-                    src="/images/zamir-zohran-poolside.jpeg"
+                    src="https://doorcountybouncyhouse.com/images/zamir-zohran-poolside.jpeg"
                     alt="Zamir and Zohran Overbeck - Door County Bouncy House Founders"
                     fill
                     className="object-contain"

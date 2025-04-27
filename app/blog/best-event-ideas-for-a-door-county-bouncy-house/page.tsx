@@ -84,7 +84,7 @@ export default function BestEventIdeasPage() {
                 </div>
                 <div className="relative w-full h-[400px] md:h-[500px] border-t-4 border-white/30">
                   <Image
-                    src="/images/bouncy-house-event.jpg"
+                    src="https://doorcountybouncyhouse.com/images/bouncy-house-event.jpg"
                     alt="Colorful bouncy houses set up for an outdoor event"
                     fill
                     className="object-cover"

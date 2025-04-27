@@ -84,7 +84,7 @@ export default function GameThemedPartiesPage() {
                 </div>
                 <div className="relative w-full h-[400px] md:h-[500px] border-t-4 border-white/30">
                   <Image
-                    src="/images/fortnite-obstacle-course.jpeg"
+                    src="https://doorcountybouncyhouse.com/images/fortnite-obstacle-course.jpeg"
                     alt="Fortnite-themed bouncy house obstacle course - perfect for game-themed birthday parties"
                     fill
                     className="object-cover"
