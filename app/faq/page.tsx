@@ -147,7 +147,7 @@ export default function FAQPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button className="bg-blue-700 hover:bg-blue-800 text-white">Contact Us</Button>
-                  <Button className="bg-white hover:bg-blue-50 text-blue-900">Call (920) 555-JUMP</Button>
+                  <Button className="bg-white hover:bg-blue-50 text-blue-900">Call (920) 333-2178</Button>
                 </div>
               </div>
             </div>

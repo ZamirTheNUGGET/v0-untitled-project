@@ -95,10 +95,10 @@ export default function ContactPage() {
                     </div>
                   </div>
                   <a
-                    href="tel:+19205557867"
+                    href="tel:+19203332178"
                     className="text-2xl font-bold text-blue-600 hover:text-blue-800 transition-colors"
                   >
-                    (920) 555-JUMP
+                    (920) 333-2178
                   </a>
                 </div>
 

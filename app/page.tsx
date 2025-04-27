@@ -271,11 +271,11 @@ export default function Home() {
                 <div className="space-y-4">
                   <div className="flex items-center gap-2">
                     <Phone className="h-5 w-5 text-white" />
-                    <span className="text-lg text-white wave-text">(920) 555-JUMP</span>
+                    <span className="text-lg text-white wave-text">(920) 333-2178</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <MapPin className="h-5 w-5 text-white" />
-                    <span className="text-lg text-white wave-text">123 Bounce Street, Door County, WI</span>
+                    <span className="text-lg text-white wave-text">3818 Bay Shore Drive, Sturgeon Bay, WI 54235</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Calendar className="h-5 w-5 text-white" />
