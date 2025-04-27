@@ -113,9 +113,6 @@ export default function Home() {
                   <Button className="bg-blue-700 hover:bg-blue-800 text-white text-lg font-bold border-2 border-white">
                     View Bouncy Houses
                   </Button>
-                  <Button className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 text-lg font-bold border-2 border-white">
-                    Contact Us
-                  </Button>
                 </div>
               </div>
             </div>
