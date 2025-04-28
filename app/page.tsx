@@ -4,15 +4,9 @@ import { Calendar, MapPin, Phone, ShoppingBag, BookOpen, Star, Users, HelpCircle
 import MobileMenu from "@/components/mobile-menu"
 import Logo from "@/components/logo"
 
-import { Button } from "@/components/ui/button"
-import CustomCursor from "@/components/custom-cursor"
-
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col relative overflow-hidden bg-gradient-to-b from-sky-400 via-cyan-300 to-blue-500">
-      {/* Custom Cursor */}
-      <CustomCursor />
-
       {/* Animated Waves Background */}
       <div className="ocean">
         <div className="wave"></div>
@@ -110,9 +104,12 @@ export default function Home() {
                   occasions throughout Door County.
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Button className="bg-blue-700 hover:bg-blue-800 text-white text-lg font-bold border-2 border-white">
+                  <a
+                    href="/products"
+                    className="inline-block bg-blue-700 hover:bg-blue-800 text-white text-lg font-bold border-2 border-white px-6 py-2 rounded-md text-center"
+                  >
                     View Bouncy Houses
-                  </Button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -233,7 +230,12 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
-                <Button className="mt-4 bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold">Learn More</Button>
+                <a
+                  href="/products"
+                  className="inline-block mt-4 bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold px-6 py-2 rounded-md text-center"
+                >
+                  Learn More
+                </a>
               </div>
             </div>
           </div>
@@ -285,8 +287,18 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row mt-6">
-                  <Button className="bg-blue-700 hover:bg-blue-800 text-white font-bold">Email Us</Button>
-                  <Button className="bg-blue-700 hover:bg-blue-800 text-white font-bold">Request Info</Button>
+                  <a
+                    href="mailto:info@doorcountybouncyhouse.com"
+                    className="inline-block bg-blue-700 hover:bg-blue-800 text-white font-bold px-6 py-2 rounded-md text-center"
+                  >
+                    Email Us
+                  </a>
+                  <a
+                    href="/contact"
+                    className="inline-block bg-blue-700 hover:bg-blue-800 text-white font-bold px-6 py-2 rounded-md text-center"
+                  >
+                    Request Info
+                  </a>
                 </div>
               </div>
             </div>
@@ -305,8 +317,18 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                <Button className="bg-blue-700 hover:bg-blue-800 text-white text-lg font-bold">Contact Us</Button>
-                <Button className="bg-blue-700 hover:bg-blue-800 text-white text-lg font-bold">View Gallery</Button>
+                <a
+                  href="/contact"
+                  className="inline-block bg-blue-700 hover:bg-blue-800 text-white text-lg font-bold px-6 py-2 rounded-md text-center"
+                >
+                  Contact Us
+                </a>
+                <a
+                  href="/products"
+                  className="inline-block bg-blue-700 hover:bg-blue-800 text-white text-lg font-bold px-6 py-2 rounded-md text-center"
+                >
+                  View Gallery
+                </a>
               </div>
             </div>
           </div>

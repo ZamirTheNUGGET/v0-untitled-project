@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { X, Menu, ShoppingBag, BookOpen, Phone, HelpCircle, Home } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import Logo from "./logo"
 
 export default function MobileMenu() {
@@ -29,34 +28,26 @@ export default function MobileMenu() {
 
   return (
     <div className="md:hidden">
-      <Button
-        variant="ghost"
-        size="icon"
-        className="text-white"
+      <button
+        className="text-white p-2"
         onClick={() => setIsOpen(!isOpen)}
         id="menu-button"
         aria-label={isOpen ? "Close menu" : "Open menu"}
       >
         <Menu className="h-6 w-6" />
-      </Button>
+      </button>
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 bg-blue-900/95 backdrop-blur-md z-50 transition-transform duration-300 ease-in-out ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
+        className={`fixed inset-0 bg-blue-900/95 z-50 transition-opacity duration-300 ${
+          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Logo variant="mobile" onClick={handleMenuItemClick} />
-          <Button
-            variant="ghost"
-            size="icon"
-            className="text-white"
-            onClick={() => setIsOpen(false)}
-            aria-label="Close menu"
-          >
+          <button className="text-white p-2" onClick={() => setIsOpen(false)} aria-label="Close menu">
             <X className="h-6 w-6" />
-          </Button>
+          </button>
         </div>
 
         <nav className="container mx-auto px-4 py-8">
@@ -68,15 +59,7 @@ export default function MobileMenu() {
               { name: "FAQ", href: "/faq", icon: <HelpCircle className="h-5 w-5" /> },
               { name: "Contact", href: "/contact", icon: <Phone className="h-5 w-5" /> },
             ].map((item, index) => (
-              <li
-                key={index}
-                className="transform transition-transform duration-300 ease-out"
-                style={{
-                  transitionDelay: `${150 + index * 75}ms`,
-                  transform: isOpen ? "translateX(0)" : "translateX(-20px)",
-                  opacity: isOpen ? 1 : 0,
-                }}
-              >
+              <li key={index}>
                 <Link
                   href={item.href}
                   className="flex items-center gap-3 text-white text-xl font-medium hover:text-yellow-300 transition-colors bg-blue-900/80 rounded-lg p-3 shadow-md"
