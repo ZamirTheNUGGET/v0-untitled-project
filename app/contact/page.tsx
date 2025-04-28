@@ -14,9 +14,9 @@ import {
   Instagram,
   Send,
 } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/mobile-menu"
 import Logo from "@/components/logo"
+import { Button } from "@/components/button"
 
 export default function ContactPage() {
   return (
@@ -140,7 +140,7 @@ export default function ContactPage() {
                   </p>
                   <div className="relative w-full h-48 rounded-lg overflow-hidden">
                     <Image
-                      src="/placeholder.svg?height=300&width=600&text=Door+County+Map"
+                      src="https://doorcountybouncyhouse.com/images/door-county-map.jpg"
                       alt="Door County Map"
                       fill
                       className="object-cover"
@@ -310,10 +310,13 @@ export default function ContactPage() {
                       Sign me up for the newsletter to receive special offers and updates
                     </label>
                   </div>
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 flex items-center justify-center gap-2">
+                  <button
+                    type="submit"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 flex items-center justify-center gap-2 rounded-md"
+                  >
                     <Send className="h-5 w-5" />
                     Send Message
-                  </Button>
+                  </button>
                 </form>
               </div>
             </div>
@@ -361,15 +364,13 @@ export default function ContactPage() {
               </div>
             </div>
             <div className="mt-8 text-center">
-              <Link href="/contact-form">
-                <Button className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-3 px-6 flex items-center justify-center gap-2">
-                  <Mail className="h-5 w-5" />
-                  Go to Contact Form
-                </Button>
-              </Link>
+              <Button href="/contact-form" variant="secondary">
+                <Mail className="h-5 w-5 mr-2" />
+                Go to Contact Form
+              </Button>
             </div>
 
-            <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg">
+            <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg mt-8">
               <div className="flex items-center gap-4 mb-6">
                 <div className="bg-blue-600 p-3 rounded-full">
                   <Calendar className="h-6 w-6 text-white" />

@@ -16,7 +16,7 @@ export default function BlogPage() {
       author: "Zamir & Zohran Overbeck",
       readTime: "3 min read",
       category: "Our Story",
-      image: "/images/zamir-zohran-poolside.jpeg",
+      image: "https://doorcountybouncyhouse.com/images/zamir-zohran-poolside.jpeg",
       color: "from-blue-600 to-blue-800",
     },
     {
@@ -28,7 +28,7 @@ export default function BlogPage() {
       author: "Door County Bouncy Team",
       readTime: "5 min read",
       category: "Party Planning",
-      image: "/images/fortnite-obstacle-course.jpeg",
+      image: "https://doorcountybouncyhouse.com/images/fortnite-obstacle-course.jpeg",
       color: "from-purple-500 to-indigo-600",
     },
     {
@@ -40,7 +40,7 @@ export default function BlogPage() {
       author: "Door County Bouncy Team",
       readTime: "4 min read",
       category: "Event Planning",
-      image: "/images/bouncy-house-event.jpg",
+      image: "https://doorcountybouncyhouse.com/images/bouncy-house-event.jpg",
       color: "from-green-500 to-green-600",
     },
     {
@@ -52,7 +52,7 @@ export default function BlogPage() {
       author: "Door County Bouncy Team",
       readTime: "3 min read",
       category: "Rentals",
-      image: "/images/bouncy-obstacle-course.png",
+      image: "https://doorcountybouncyhouse.com/images/bouncy-obstacle-course.png",
       color: "from-yellow-500 to-amber-600",
     },
   ]
@@ -152,7 +152,7 @@ export default function BlogPage() {
                     </div>
                     <div className="relative h-80 md:h-auto">
                       <Image
-                        src="/images/zamir-zohran-poolside.jpeg"
+                        src="https://doorcountybouncyhouse.com/images/zamir-zohran-poolside.jpeg"
                         alt="Zamir and Zohran Overbeck - Door County Bouncy House Founders"
                         fill
                         className="object-contain rounded-tr-xl rounded-br-xl md:rounded-bl-none md:rounded-tr-xl"
@@ -191,7 +191,7 @@ export default function BlogPage() {
                     </div>
                     <div className="relative h-80 md:h-auto">
                       <Image
-                        src="/images/fortnite-themed-bouncy-house.png"
+                        src="https://doorcountybouncyhouse.com/images/fortnite-themed-bouncy-house.png"
                         alt="Fortnite-themed bouncy house obstacle course for game-themed birthday parties"
                         fill
                         className="object-cover rounded-tr-xl rounded-br-xl md:rounded-bl-none md:rounded-tr-xl"

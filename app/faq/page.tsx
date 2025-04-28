@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Anchor, ArrowLeft, Home, ShoppingBag, BookOpen, Phone, HelpCircle, Plus, Minus } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/mobile-menu"
+import { Button } from "@/components/button"
 
 export default function FAQPage() {
   return (
@@ -146,8 +146,10 @@ export default function FAQPage() {
                   have about our bouncy house rentals.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-blue-700 hover:bg-blue-800 text-white">Contact Us</Button>
-                  <Button className="bg-white hover:bg-blue-50 text-blue-900">Call (920) 333-2178</Button>
+                  <Button href="/contact">Contact Us</Button>
+                  <Button variant="secondary" href="tel:+19203332178">
+                    Call (920) 333-2178
+                  </Button>
                 </div>
               </div>
             </div>

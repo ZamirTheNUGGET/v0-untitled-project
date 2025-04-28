@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft, ShoppingBag, BookOpen, Phone, HelpCircle, Calendar, Clock, Tag, Home } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/button"
 import MobileMenu from "@/components/mobile-menu"
 import Logo from "@/components/logo"
 
@@ -315,25 +315,28 @@ export default function GameThemedPartiesPage() {
 
                   <div className="bg-yellow-100 p-6 rounded-lg mt-8 border-l-4 border-yellow-500">
                     <h3 className="text-xl font-bold text-yellow-800 mb-2">Ready to Level Up Your Child's Birthday?</h3>
-                    <p className="mb-0">
-                      Contact Door County Bouncy House today to reserve the perfect bouncy house for your game-themed
-                      party! Our friendly team is ready to help you create an unforgettable celebration that will have
-                      your child and their friends talking about it for years to come.
+                    <p>
+                      Contact Door County Bouncy House today to reserve the perfect game-themed bouncy house for your
+                      child's next birthday party! We'll help you create an unforgettable celebration that will have
+                      everyone talking for years to come.
                     </p>
                   </div>
                 </div>
               </div>
 
               {/* Call to Action */}
-              <div className="bg-gradient-to-br from-purple-600 to-indigo-700 text-white rounded-xl p-6 md:p-8 shadow-lg">
-                <h2 className="text-2xl font-bold mb-4">Book Your Game-Themed Party Package Today!</h2>
+              <div className="bg-gradient-to-br from-purple-500 to-indigo-600 text-white rounded-xl p-6 md:p-8 shadow-lg">
+                <h2 className="text-2xl font-bold mb-4">Ready to Book Your Game-Themed Party?</h2>
                 <p className="mb-6">
-                  Contact us to learn about our special game-themed party packages that include bouncy house rentals and
-                  party planning assistance!
+                  Contact us today to reserve the perfect bouncy house for your child's game-themed birthday party!
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold">Book Now</Button>
-                  <Button className="bg-white hover:bg-blue-50 text-indigo-900">View All Bouncy Houses</Button>
+                  <Button href="/contact" variant="secondary">
+                    Book Now
+                  </Button>
+                  <Button href="/products" variant="outline">
+                    View All Bouncy Houses
+                  </Button>
                 </div>
               </div>
             </div>

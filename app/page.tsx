@@ -3,6 +3,7 @@ import Image from "next/image"
 import { Calendar, MapPin, Phone, ShoppingBag, BookOpen, Star, Users, HelpCircle } from "lucide-react"
 import MobileMenu from "@/components/mobile-menu"
 import Logo from "@/components/logo"
+import { Button } from "@/components/button"
 
 export default function Home() {
   return (
@@ -104,12 +105,9 @@ export default function Home() {
                   occasions throughout Door County.
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <a
-                    href="/products"
-                    className="inline-block bg-blue-700 hover:bg-blue-800 text-white text-lg font-bold border-2 border-white px-6 py-2 rounded-md text-center"
-                  >
+                  <Button href="/products" variant="default">
                     View Bouncy Houses
-                  </a>
+                  </Button>
                 </div>
               </div>
             </div>
@@ -230,12 +228,9 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
-                <a
-                  href="/products"
-                  className="inline-block mt-4 bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold px-6 py-2 rounded-md text-center"
-                >
+                <Button href="/products" variant="secondary">
                   Learn More
-                </a>
+                </Button>
               </div>
             </div>
           </div>
@@ -287,18 +282,8 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row mt-6">
-                  <a
-                    href="mailto:info@doorcountybouncyhouse.com"
-                    className="inline-block bg-blue-700 hover:bg-blue-800 text-white font-bold px-6 py-2 rounded-md text-center"
-                  >
-                    Email Us
-                  </a>
-                  <a
-                    href="/contact"
-                    className="inline-block bg-blue-700 hover:bg-blue-800 text-white font-bold px-6 py-2 rounded-md text-center"
-                  >
-                    Request Info
-                  </a>
+                  <Button href="mailto:info@doorcountybouncyhouse.com">Email Us</Button>
+                  <Button href="/contact">Request Info</Button>
                 </div>
               </div>
             </div>
@@ -317,18 +302,8 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                <a
-                  href="/contact"
-                  className="inline-block bg-blue-700 hover:bg-blue-800 text-white text-lg font-bold px-6 py-2 rounded-md text-center"
-                >
-                  Contact Us
-                </a>
-                <a
-                  href="/products"
-                  className="inline-block bg-blue-700 hover:bg-blue-800 text-white text-lg font-bold px-6 py-2 rounded-md text-center"
-                >
-                  View Gallery
-                </a>
+                <Button href="/contact">Contact Us</Button>
+                <Button href="/products">View Gallery</Button>
               </div>
             </div>
           </div>

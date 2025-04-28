@@ -1,7 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ShoppingBag, BookOpen, Phone, HelpCircle, ArrowLeft, Check, Info, Home } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/mobile-menu"
 import Logo from "@/components/logo"
 
@@ -31,7 +30,7 @@ export default function ProductsPage() {
       id: "classic-bounce",
       name: "Classic Bouncy Houses",
       description: "Traditional bouncy castles perfect for birthday parties and smaller gatherings.",
-      image: "/images/classic-bouncy-castle.png",
+      image: "https://doorcountybouncyhouse.com/images/classic-bouncy-castle.png",
       features: [
         "Simple, classic design",
         "Perfect for younger children",
@@ -50,7 +49,7 @@ export default function ProductsPage() {
       id: "combo-bounce",
       name: "Combo Bouncy Houses",
       description: "Get the best of both worlds with our combo units featuring bouncing areas, slides, and more!",
-      image: "/images/carnival-tickets-bouncy-house.jpeg",
+      image: "https://doorcountybouncyhouse.com/images/carnival-tickets-bouncy-house.jpeg",
       features: [
         "Bounce area plus additional features",
         "Slides, basketball hoops, or climbing walls",
@@ -196,9 +195,12 @@ export default function ProductsPage() {
                             ))}
                           </ul>
                         </div>
-                        <Button className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold self-start">
+                        <a
+                          href="#contact"
+                          className="inline-block bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold px-6 py-2 rounded-md text-center"
+                        >
                           Book This Bouncy House
-                        </Button>
+                        </a>
                       </div>
                       <div className="relative h-80 md:h-auto">
                         <Image
@@ -237,7 +239,10 @@ export default function ProductsPage() {
             </div>
 
             {/* Booking Information */}
-            <div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-xl p-6 md:p-8 shadow-lg mt-12">
+            <div
+              className="bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-xl p-6 md:p-8 shadow-lg mt-12"
+              id="contact"
+            >
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
                   <h2 className="text-2xl font-bold mb-4">Ready to Book Your Bouncy House?</h2>
@@ -260,8 +265,18 @@ export default function ProductsPage() {
                     </div>
                   </div>
                   <div className="flex flex-col sm:flex-row gap-4 mt-6">
-                    <Button className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold">Book Now</Button>
-                    <Button className="bg-white hover:bg-blue-50 text-blue-900">Request Quote</Button>
+                    <a
+                      href="mailto:info@doorcountybouncyhouse.com"
+                      className="inline-block bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold px-6 py-2 rounded-md text-center"
+                    >
+                      Book Now
+                    </a>
+                    <a
+                      href="/contact"
+                      className="inline-block bg-white hover:bg-blue-50 text-blue-900 px-6 py-2 rounded-md text-center font-bold"
+                    >
+                      Request Quote
+                    </a>
                   </div>
                 </div>
                 <div className="relative h-64 md:h-auto rounded-lg overflow-hidden">

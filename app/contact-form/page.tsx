@@ -1,6 +1,5 @@
 import Link from "next/link"
 import { Home, ShoppingBag, BookOpen, Phone, HelpCircle, Calendar, Send, ArrowLeft } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/mobile-menu"
 import Logo from "@/components/logo"
 
@@ -178,10 +177,13 @@ export default function ContactFormPage() {
                       Sign me up for the newsletter to receive special offers and updates
                     </label>
                   </div>
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 flex items-center justify-center gap-2">
+                  <button
+                    type="submit"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 flex items-center justify-center gap-2 rounded-md"
+                  >
                     <Send className="h-5 w-5" />
                     Send Message
-                  </Button>
+                  </button>
                 </form>
               </div>
 
