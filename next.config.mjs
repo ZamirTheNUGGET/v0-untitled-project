@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -8,7 +9,18 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'doorcountybouncyhouse.com',
+        pathname: '/images/**',
+      },
+    ],
   },
-}
+  // Disable unnecessary features for static sites
+  experimental: {
+    serverActions: false,
+  },
+};
 
-export default nextConfig
+export default nextConfig;
