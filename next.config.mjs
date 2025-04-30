@@ -17,10 +17,6 @@ const nextConfig = {
       },
     ],
   },
-  // Disable unnecessary features for static sites
-  experimental: {
-    serverActions: false,
-  },
 };
 
 export default nextConfig;
