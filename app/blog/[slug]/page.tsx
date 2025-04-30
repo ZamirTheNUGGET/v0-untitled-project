@@ -1,9 +1,7 @@
-import { notFound } from "next/server"
-import { getBlogPost } from "@/data/blog-posts"
-import BlogLayout from "@/components/blog-layout"
-
-// This is needed for dynamic imports
-import dynamic from "next/dynamic"
+import { notFound } from "next/server";
+import { getBlogPost } from "@/data/blog-posts";
+import BlogLayout from "@/components/blog-layout";
+import dynamic from "next/dynamic";
 
 // Sample blog posts data - in a real app, this would come from a database or CMS
 const blogPosts = [
@@ -240,31 +238,25 @@ const blogPosts = [
     `,
     relatedPosts: ["top-5-bouncy-house-safety-tips", "planning-the-perfect-bouncy-house-party"],
   },
-]
+];
+
+// This function tells Next.js which /blog/[slug] pages to generate at build time
 export async function generateStaticParams() {
-  // List all slugs from your blogPosts array
-  return [
-    { slug: "top-5-bouncy-house-safety-tips" },
-    { slug: "planning-the-perfect-bouncy-house-party" },
-    { slug: "best-event-ideas-for-a-door-county-bouncy-house" },
-    { slug: "best-bouncy-houses-for-different-age-groups" },
-    { slug: "how-to-clean-and-maintain-your-bouncy-house" },
-    { slug: "why-our-door-county-bouncy-house-rentals-are-the-best" },
-  ]
+  return blogPosts.map(post => ({ slug: post.slug }));
 }
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = getBlogPost(params.slug)
+  const post = getBlogPost(params.slug);
 
   if (!post) {
-    return notFound()
+    return notFound();
   }
 
   // Dynamic import of blog content based on slug
   const BlogContent = dynamic(() => import(`@/app/blog/${params.slug}/content`), {
     loading: () => <p>Loading...</p>,
     ssr: true,
-  })
+  });
 
   return (
     <BlogLayout
@@ -277,5 +269,5 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     >
       <BlogContent />
     </BlogLayout>
-  )
+  );
 }
