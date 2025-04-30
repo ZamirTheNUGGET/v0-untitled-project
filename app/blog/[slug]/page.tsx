@@ -241,6 +241,17 @@ const blogPosts = [
     relatedPosts: ["top-5-bouncy-house-safety-tips", "planning-the-perfect-bouncy-house-party"],
   },
 ]
+export async function generateStaticParams() {
+  // List all slugs from your blogPosts array
+  return [
+    { slug: "top-5-bouncy-house-safety-tips" },
+    { slug: "planning-the-perfect-bouncy-house-party" },
+    { slug: "best-event-ideas-for-a-door-county-bouncy-house" },
+    { slug: "best-bouncy-houses-for-different-age-groups" },
+    { slug: "how-to-clean-and-maintain-your-bouncy-house" },
+    { slug: "why-our-door-county-bouncy-house-rentals-are-the-best" },
+  ]
+}
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = getBlogPost(params.slug)
