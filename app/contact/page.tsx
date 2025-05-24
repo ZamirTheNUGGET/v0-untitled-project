@@ -67,7 +67,7 @@ export default function ContactPage() {
                 </p>
                 <div className="relative w-full h-48 rounded-lg overflow-hidden">
                   <Image
-                    src="https://doorcountybouncyhouse.com/images/door-county-map.jpg"
+                    src="https://images.doorcountybouncyhouse.com/images/door-county-map.jpg"
                     alt="Door County Map"
                     fill
                     className="object-cover"

@@ -50,7 +50,7 @@ export default function BlogPage() {
                   </div>
                   <div className="relative h-80 md:h-auto">
                     <Image
-                      src="https://doorcountybouncyhouse.com/images/zamir-zohran-poolside.jpeg"
+                      src="https://images.doorcountybouncyhouse.com/images/zamir-zohran-poolside.jpeg"
                       alt="Zamir and Zohran Overbeck - Door County Bouncy House Founders"
                       fill
                       className="object-contain rounded-tr-xl rounded-br-xl md:rounded-bl-none md:rounded-tr-xl"
@@ -89,7 +89,7 @@ export default function BlogPage() {
                   </div>
                   <div className="relative h-80 md:h-auto">
                     <Image
-                      src="https://doorcountybouncyhouse.com/images/fortnite-themed-bouncy-house.png"
+                      src="https://images.doorcountybouncyhouse.com/images/fortnite-themed-bouncy-house.png"
                       alt="Fortnite-themed bouncy house obstacle course for game-themed birthday parties"
                       fill
                       className="object-cover rounded-tr-xl rounded-br-xl md:rounded-bl-none md:rounded-tr-xl"

@@ -135,7 +135,7 @@ export default function ProductsPage() {
               </div>
               <div className="relative h-64 md:h-auto rounded-lg overflow-hidden">
                 <Image
-                  src="https://doorcountybouncyhouse.com/images/bouncy-house-hero.jpg"
+                  src="https://images.doorcountybouncyhouse.com/images/bouncy-house-hero.jpg"
                   alt="Happy children enjoying a bouncy house"
                   fill
                   className="object-cover rounded-lg"

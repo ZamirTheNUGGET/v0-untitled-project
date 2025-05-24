@@ -12,7 +12,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'doorcountybouncyhouse.com',
+        hostname: 'images.doorcountybouncyhouse.com',
         pathname: '/images/**',
       },
     ],

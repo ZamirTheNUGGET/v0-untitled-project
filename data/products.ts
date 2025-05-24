@@ -17,7 +17,7 @@ export const products: Product[] = [
     id: "obstacle-course",
     name: "Obstacle Course Bouncy Houses",
     description: "Challenge your guests with our exciting obstacle courses that provide hours of active fun!",
-    image: "https://doorcountybouncyhouse.com/images/fortnite-obstacle-course.jpeg",
+    image: "https://images.doorcountybouncyhouse.com/images/fortnite-obstacle-course.jpeg",
     features: [
       "Multiple obstacles and challenges",
       "Perfect for competitive fun",
@@ -36,7 +36,7 @@ export const products: Product[] = [
     id: "classic-bounce",
     name: "Classic Bouncy Houses",
     description: "Traditional bouncy castles perfect for birthday parties and smaller gatherings.",
-    image: "https://doorcountybouncyhouse.com/images/classic-bouncy-castle.png",
+    image: "https://images.doorcountybouncyhouse.com/images/classic-bouncy-castle.png",
     features: [
       "Simple, classic design",
       "Perfect for younger children",
@@ -55,7 +55,7 @@ export const products: Product[] = [
     id: "combo-bounce",
     name: "Combo Bouncy Houses",
     description: "Get the best of both worlds with our combo units featuring bouncing areas, slides, and more!",
-    image: "https://doorcountybouncyhouse.com/images/carnival-tickets-bouncy-house.jpeg",
+    image: "https://images.doorcountybouncyhouse.com/images/carnival-tickets-bouncy-house.jpeg",
     features: [
       "Bounce area plus additional features",
       "Slides, basketball hoops, or climbing walls",
@@ -74,7 +74,7 @@ export const products: Product[] = [
     id: "water-slides",
     name: "Water Slides & Splash Zones",
     description: "Beat the summer heat with our exciting water slides and splash bouncy houses!",
-    image: "https://doorcountybouncyhouse.com/images/tropical-water-slide-bouncy-house.jpeg",
+    image: "https://images.doorcountybouncyhouse.com/images/tropical-water-slide-bouncy-house.jpeg",
     features: [
       "Perfect for hot summer days",
       "Slides with splash pools",
@@ -94,7 +94,7 @@ export const products: Product[] = [
     name: "Themed Bouncy Houses",
     description:
       "Make your event extra special with our themed bouncy houses featuring popular characters and designs!",
-    image: "https://doorcountybouncyhouse.com/images/ninja-themed-bouncy-house.jpeg",
+    image: "https://images.doorcountybouncyhouse.com/images/ninja-themed-bouncy-house.jpeg",
     features: [
       "Exciting character themes",
       "Visually appealing designs",

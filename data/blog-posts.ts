@@ -24,7 +24,7 @@ export const blogPosts: BlogPost[] = [
     author: "Zamir & Zohran Overbeck",
     readTime: "3 min read",
     category: "Our Story",
-    image: "https://doorcountybouncyhouse.com/images/zamir-zohran-poolside.jpeg",
+    image: "https://images.doorcountybouncyhouse.com/images/zamir-zohran-poolside.jpeg",
     color: "from-blue-600 to-blue-800",
     content: `
       <p class="text-lg">
@@ -93,7 +93,7 @@ export const blogPosts: BlogPost[] = [
     author: "Door County Bouncy Team",
     readTime: "5 min read",
     category: "Party Planning",
-    image: "https://doorcountybouncyhouse.com/images/fortnite-obstacle-course.jpeg",
+    image: "https://images.doorcountybouncyhouse.com/images/fortnite-obstacle-course.jpeg",
     color: "from-purple-500 to-indigo-600",
     content: `
       <p class="text-lg">
@@ -200,7 +200,7 @@ export const blogPosts: BlogPost[] = [
     author: "Door County Bouncy Team",
     readTime: "4 min read",
     category: "Event Planning",
-    image: "https://doorcountybouncyhouse.com/images/bouncy-house-event.jpg",
+    image: "https://images.doorcountybouncyhouse.com/images/bouncy-house-event.jpg",
     color: "from-green-500 to-green-600",
     content: `
       <p class="text-lg">
@@ -255,7 +255,7 @@ export const blogPosts: BlogPost[] = [
     author: "Door County Bouncy Team",
     readTime: "3 min read",
     category: "Rentals",
-    image: "https://doorcountybouncyhouse.com/images/bouncy-obstacle-course.png",
+    image: "https://images.doorcountybouncyhouse.com/images/bouncy-obstacle-course.png",
     color: "from-yellow-500 to-amber-600",
     content: `
       <p class="text-lg">

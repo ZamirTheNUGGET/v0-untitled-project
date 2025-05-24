@@ -84,7 +84,7 @@ export default function Home() {
               {/* Image now on the left */}
               <div className="relative mx-auto w-full max-w-[500px] overflow-hidden rounded-xl order-2 lg:order-1">
                 <Image
-                  src="https://doorcountybouncyhouse.com/images/bouncy-house-hero.jpg"
+                  src="https://images.doorcountybouncyhouse.com/images/bouncy-house-hero.jpg"
                   alt="Colorful bouncy castle with slide"
                   width={800}
                   height={600}
@@ -187,7 +187,7 @@ export default function Home() {
               {/* Image on the left */}
               <div className="relative mx-auto w-full max-w-[500px] overflow-hidden rounded-xl">
                 <Image
-                  src="https://doorcountybouncyhouse.com/images/bouncy-house-package.jpg"
+                  src="https://images.doorcountybouncyhouse.com/images/bouncy-house-package.jpg"
                   alt="Castle bouncy house with slide and splash pool"
                   width={600}
                   height={400}
@@ -242,7 +242,7 @@ export default function Home() {
               {/* Image on the left */}
               <div className="relative mx-auto w-full max-w-[500px] overflow-hidden rounded-xl order-2 lg:order-1">
                 <Image
-                  src="https://doorcountybouncyhouse.com/images/zamir-zohran-poolside.jpeg"
+                  src="https://images.doorcountybouncyhouse.com/images/zamir-zohran-poolside.jpeg"
                   alt="Zamir and Zohran Overbeck - Door County Bouncy House Founders"
                   width={600}
                   height={400}
