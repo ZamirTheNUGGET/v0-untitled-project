@@ -89,7 +89,7 @@ export default function BlogPage() {
                   </div>
                   <div className="relative h-80 md:h-auto">
                     <Image
-                      src="https://images.doorcountybouncyhouse.com/images/fortnight bouncy house.jpg"
+                      src="https://images.doorcountybouncyhouse.com/images/fortnight_bouncy_house.jpg"
                       alt="Fortnite-themed bouncy house obstacle course for game-themed birthday parties"
                       fill
                       className="object-cover rounded-tr-xl rounded-br-xl md:rounded-bl-none md:rounded-tr-xl"

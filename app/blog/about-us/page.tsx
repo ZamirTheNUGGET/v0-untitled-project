@@ -158,8 +158,9 @@ export default function AboutUsPage() {
                 <h2 className="text-2xl font-bold mb-4">Ready to Bounce?</h2>
                 <p className="mb-6">Contact us today to book a bouncy house for your next event in Door County!</p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-blue-700 hover:bg-blue-800 text-white">Contact Us</Button>
-                  <Button className="bg-white hover:bg-blue-50 text-blue-900">Contact Us</Button>
+                  <Button href="/contact" className="bg-blue-700 hover:bg-blue-800 text-white">
+                    Contact Us
+                  </Button>
                 </div>
               </div>
             </div>

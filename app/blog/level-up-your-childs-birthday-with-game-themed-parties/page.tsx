@@ -11,7 +11,7 @@ export default function GameThemedPartiesPage() {
       date={post.date}
       readTime={post.readTime}
       category={post.category}
-      image="https://images.doorcountybouncyhouse.com/images/fortnight bouncy house.jpg"
+      image="https://images.doorcountybouncyhouse.com/images/fortnight_bouncy_house.jpg"
       imageAlt="Fortnite-themed bouncy house obstacle course - perfect for game-themed birthday parties"
       color={post.color}
     >
