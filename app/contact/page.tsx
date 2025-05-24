@@ -40,10 +40,10 @@ export default function ContactPage() {
                   </div>
                 </div>
                 <a
-                  href="mailto:info@doorcountybouncyhouse.com"
+                  href="mailto:doorcountybouncyhouse@gmail.com"
                   className="text-xl font-bold text-blue-600 hover:text-blue-800 transition-colors"
                 >
-                  info@doorcountybouncyhouse.com
+                  doorcountybouncyhouse@gmail.com
                 </a>
               </div>
 
@@ -61,10 +61,7 @@ export default function ContactPage() {
                   We proudly serve all of Door County including Sturgeon Bay, Egg Harbor, Fish Creek, Sister Bay,
                   Baileys Harbor, Ephraim, and surrounding areas.
                 </p>
-                <p className="text-gray-700 mb-4">
-                  <span className="font-semibold">Seasonal Availability:</span> Our bouncy house rental services are
-                  available from June through the end of August.
-                </p>
+            
                 <div className="relative w-full h-48 rounded-lg overflow-hidden">
                   <Image
                     src="https://images.doorcountybouncyhouse.com/images/door-county-map.jpg"
