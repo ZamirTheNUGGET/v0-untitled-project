@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowLeft, ShoppingBag, BookOpen, Phone, HelpCircle, Home } from "lucide-react"
+import { ArrowLeft, BookOpen, Phone, HelpCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/mobile-menu"
 import Logo from "@/components/logo"
@@ -23,11 +23,9 @@ export default function AboutUsPage() {
           <nav className="hidden md:flex items-center">
             <div className="flex space-x-1 bg-blue-700/50 backdrop-blur-sm p-1 rounded-full">
               {[
-                { name: "Home", href: "/", icon: <Home className="h-4 w-4" /> },
-                { name: "Products", href: "/products", icon: <ShoppingBag className="h-4 w-4" /> },
                 { name: "Blog", href: "/blog", icon: <BookOpen className="h-4 w-4" /> },
                 { name: "FAQ", href: "/faq", icon: <HelpCircle className="h-4 w-4" /> },
-                { name: "Contact", href: "/#contact", icon: <Phone className="h-4 w-4" /> },
+                { name: "Contact", href: "/contact", icon: <Phone className="h-4 w-4" /> },
               ].map((item, index) => (
                 <Link
                   key={index}

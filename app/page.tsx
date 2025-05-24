@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Calendar, MapPin, Phone, ShoppingBag, BookOpen, Star, Users, HelpCircle } from "lucide-react"
+import { Calendar, MapPin, Phone, BookOpen, Star, Users, HelpCircle } from "lucide-react"
 import MobileMenu from "@/components/mobile-menu"
 import Logo from "@/components/logo"
 import { Button } from "@/components/button"
@@ -53,10 +53,9 @@ export default function Home() {
           <nav className="hidden md:flex items-center">
             <div className="flex space-x-1 bg-blue-700/50 backdrop-blur-sm p-1 rounded-full">
               {[
-                { name: "Products", href: "/products", icon: <ShoppingBag className="h-4 w-4" /> },
                 { name: "Blog", href: "/blog", icon: <BookOpen className="h-4 w-4" /> },
                 { name: "FAQ", href: "/faq", icon: <HelpCircle className="h-4 w-4" /> },
-                { name: "Contact", href: "#contact", icon: <Phone className="h-4 w-4" /> },
+                { name: "Contact", href: "/contact", icon: <Phone className="h-4 w-4" /> },
               ].map((item, index) => (
                 <Link
                   key={index}
@@ -105,8 +104,8 @@ export default function Home() {
                   occasions throughout Door County.
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Button href="/products" variant="default">
-                    View Bouncy Houses
+                  <Button href="/contact" variant="default">
+                    Contact Us
                   </Button>
                 </div>
               </div>
@@ -228,7 +227,7 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
-                <Button href="/products" variant="secondary">
+                <Button href="/contact" variant="secondary">
                   Learn More
                 </Button>
               </div>
@@ -308,7 +307,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Button href="/contact">Contact Us</Button>
-                <Button href="/products">View Gallery</Button>
+                <Button href="/blog">View Blog</Button>
               </div>
             </div>
           </div>
@@ -335,7 +334,7 @@ export default function Home() {
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   fillRule="evenodd"
-                  d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63z"
+                  d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.80c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63z"
                   clipRule="evenodd"
                 />
               </svg>

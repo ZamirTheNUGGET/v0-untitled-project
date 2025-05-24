@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { X, Menu, ShoppingBag, BookOpen, Phone, HelpCircle, Home } from "lucide-react"
+import { X, Menu, BookOpen, Phone, HelpCircle, Home } from "lucide-react"
 import Logo from "./logo"
 
 export default function MobileMenu() {
@@ -54,7 +54,6 @@ export default function MobileMenu() {
           <ul className="space-y-6">
             {[
               { name: "Home", href: "/", icon: <Home className="h-5 w-5" /> },
-              { name: "Products", href: "/products", icon: <ShoppingBag className="h-5 w-5" /> },
               { name: "Blog", href: "/blog", icon: <BookOpen className="h-5 w-5" /> },
               { name: "FAQ", href: "/faq", icon: <HelpCircle className="h-5 w-5" /> },
               { name: "Contact", href: "/contact", icon: <Phone className="h-5 w-5" /> },

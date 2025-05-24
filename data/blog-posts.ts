@@ -93,7 +93,7 @@ export const blogPosts: BlogPost[] = [
     author: "Door County Bouncy Team",
     readTime: "5 min read",
     category: "Party Planning",
-    image: "https://images.doorcountybouncyhouse.com/images/fortnite-obstacle-course.jpeg",
+    image: "https://images.doorcountybouncyhouse.com/images/fortnite-themed-bouncy-house.png",
     color: "from-purple-500 to-indigo-600",
     content: `
       <p class="text-lg">

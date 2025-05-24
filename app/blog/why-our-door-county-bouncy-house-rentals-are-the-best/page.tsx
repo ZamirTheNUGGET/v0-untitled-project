@@ -27,7 +27,7 @@ export default function BestRentalsPage() {
                 { name: "Products", href: "/products", icon: <ShoppingBag className="h-4 w-4" /> },
                 { name: "Blog", href: "/blog", icon: <BookOpen className="h-4 w-4" /> },
                 { name: "FAQ", href: "/faq", icon: <HelpCircle className="h-4 w-4" /> },
-                { name: "Contact", href: "/#contact", icon: <Phone className="h-4 w-4" /> },
+                { name: "Contact", href: "/contact", icon: <Phone className="h-4 w-4" /> },
               ].map((item, index) => (
                 <Link
                   key={index}
