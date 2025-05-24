@@ -174,7 +174,7 @@ export default function BestRentalsPage() {
                 <h2 className="text-2xl font-bold mb-4">Ready to Book the Best Bouncy House in Door County?</h2>
                 <p className="mb-6">Contact us today to check availability and reserve your inflatable!</p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold">Book Now</Button>
+                  <Button className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold">Contact Us</Button>
                 </div>
               </div>
             </div>

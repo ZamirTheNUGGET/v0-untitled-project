@@ -112,7 +112,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               <p className="mb-6">Contact us today to reserve the perfect bouncy house for your next event!</p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button href="/contact" variant="default">
-                  Book Now
+                  Contact Us
                 </Button>
               </div>
             </div>
