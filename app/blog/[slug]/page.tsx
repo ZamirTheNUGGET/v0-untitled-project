@@ -114,9 +114,6 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                 <Button href="/contact" variant="default">
                   Book Now
                 </Button>
-                <Button href="/blog" variant="secondary">
-                  View All Blog Posts
-                </Button>
               </div>
             </div>
           </div>

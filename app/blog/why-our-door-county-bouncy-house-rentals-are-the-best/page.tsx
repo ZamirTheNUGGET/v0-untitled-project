@@ -84,7 +84,7 @@ export default function BestRentalsPage() {
                 </div>
                 <div className="relative w-full h-[400px] md:h-[500px] border-t-4 border-white/30">
                   <Image
-                    src="/placeholder.svg?height=600&width=1200&text=Obstacle+Course+Bouncy+House"
+                    src="https://images.doorcountybouncyhouse.com/images/bouncy-obstacle-course.png"
                     alt="Colorful obstacle course bouncy house with castle towers"
                     fill
                     className="object-cover"
@@ -175,7 +175,6 @@ export default function BestRentalsPage() {
                 <p className="mb-6">Contact us today to check availability and reserve your inflatable!</p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold">Book Now</Button>
-                  <Button className="bg-white hover:bg-blue-50 text-blue-900">View All Rentals</Button>
                 </div>
               </div>
             </div>

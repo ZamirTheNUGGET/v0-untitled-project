@@ -287,7 +287,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row mt-6">
                   <Button href="mailto:info@doorcountybouncyhouse.com">Email Us</Button>
-                  <Button href="/contact">Request Info</Button>
+                  <Button href="/contact">Contact Us</Button>
                 </div>
               </div>
             </div>
