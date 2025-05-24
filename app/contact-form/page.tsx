@@ -200,7 +200,7 @@ export default function ContactFormPage() {
                 <div className="mt-6 p-4 bg-white/20 rounded-lg">
                   <p className="text-white font-medium">
                     Prefer to speak with someone directly? Call us at (920) 333-2178 or email us at
-                    info@doorcountybouncyhouse.com
+                    doorcountybouncyhouse@gmail.com
                   </p>
                 </div>
               </div>
