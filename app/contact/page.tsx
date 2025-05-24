@@ -1,9 +1,7 @@
 import Link from "next/link"
-import Image from "next/image"
-import { Mail, MapPin, Clock, Calendar, Facebook, Instagram } from "lucide-react"
+import { Mail, MapPin, Calendar } from "lucide-react"
 import PageLayout from "@/components/page-layout"
 import { Button } from "@/components/button"
-import ContactForm from "@/components/contact-form"
 import { shortFaqs } from "@/data/faqs"
 
 export default function ContactPage() {
@@ -25,114 +23,66 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="grid gap-8 lg:grid-cols-2">
+          <div className="space-y-8">
             {/* Contact Information */}
-            <div className="space-y-8">
-              {/* Contact Cards */}
-              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="bg-blue-600 p-3 rounded-full">
-                    <Mail className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-blue-800">Email</h3>
-                    <p className="text-gray-600">Send us a message</p>
-                  </div>
+            {/* Contact Cards */}
+            <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="bg-blue-600 p-3 rounded-full">
+                  <Mail className="h-6 w-6 text-white" />
                 </div>
-                <a
-                  href="mailto:doorcountybouncyhouse@gmail.com"
-                  className="text-xl font-bold text-blue-600 hover:text-blue-800 transition-colors"
-                >
-                  doorcountybouncyhouse@gmail.com
-                </a>
+                <div>
+                  <h3 className="text-xl font-bold text-blue-800">Email</h3>
+                  <p className="text-gray-600">Send us a message</p>
+                </div>
               </div>
-
-              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="bg-blue-600 p-3 rounded-full">
-                    <MapPin className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-blue-800">Service Area</h3>
-                    <p className="text-gray-600">We deliver throughout Door County</p>
-                  </div>
-                </div>
-                <p className="text-gray-700 mb-2">
-                  We proudly serve all of Door County including Sturgeon Bay, Egg Harbor, Fish Creek, Sister Bay,
-                  Baileys Harbor, Ephraim, and surrounding areas.
+              <a
+                href="mailto:doorcountybouncyhouse@gmail.com"
+                className="text-xl font-bold text-blue-600 hover:text-blue-800 transition-colors block mb-4"
+              >
+                doorcountybouncyhouse@gmail.com
+              </a>
+              <div className="p-3 bg-blue-100 rounded-lg border-l-4 border-blue-500">
+                <p className="text-sm text-blue-800">
+                  <span className="font-bold">When emailing, please include:</span> Your contact details (phone/text),
+                  dates of your event, and location of your event.
                 </p>
-            
-                <div className="relative w-full h-48 rounded-lg overflow-hidden">
-                  <Image
-                    src="https://images.doorcountybouncyhouse.com/images/door-county-map.jpg"
-                    alt="Door County Map"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-
-              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="bg-blue-600 p-3 rounded-full">
-                    <Clock className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-blue-800">Business Hours</h3>
-                    <p className="text-gray-600">When you can reach us</p>
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <div className="flex justify-between">
-                    <span className="font-medium">Monday - Friday</span>
-                    <span>9:00 AM - 6:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="font-medium">Saturday</span>
-                    <span>9:00 AM - 4:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="font-medium">Sunday</span>
-                    <span>By appointment only</span>
-                  </div>
-                </div>
-                <div className="mt-4 p-3 bg-yellow-100 rounded-lg border-l-4 border-yellow-500">
-                  <p className="text-sm text-yellow-800">
-                    <span className="font-bold">Note:</span> We are available from June to the end of August. Delivery
-                    and setup times are available outside of office hours by appointment.
-                  </p>
-                </div>
-              </div>
-
-              {/* Social Media */}
-              <div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-xl p-6 shadow-lg">
-                <h3 className="text-xl font-bold mb-4">Connect With Us</h3>
-                <p className="mb-6">Follow us on social media for special offers, event photos, and more!</p>
-                <div className="flex gap-4">
-                  <a
-                    href="https://facebook.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-white/20 hover:bg-white/30 transition-colors p-3 rounded-full"
-                  >
-                    <Facebook className="h-6 w-6" />
-                    <span className="sr-only">Facebook</span>
-                  </a>
-                  <a
-                    href="https://instagram.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-white/20 hover:bg-white/30 transition-colors p-3 rounded-full"
-                  >
-                    <Instagram className="h-6 w-6" />
-                    <span className="sr-only">Instagram</span>
-                  </a>
-                </div>
               </div>
             </div>
 
-            {/* Contact Form */}
-            <ContactForm />
+            <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="bg-blue-600 p-3 rounded-full">
+                  <MapPin className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-blue-800">Service Area</h3>
+                  <p className="text-gray-600">We deliver throughout Door County</p>
+                </div>
+              </div>
+              <p className="text-gray-700 mb-4">
+                We proudly serve all of Door County including Sturgeon Bay, Egg Harbor, Fish Creek, Sister Bay, Baileys
+                Harbor, Ephraim, and surrounding areas.
+              </p>
+
+              {/* Door County Map */}
+              <div className="relative w-full h-96 rounded-lg overflow-hidden border-2 border-blue-200">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d186590.0234567!2d-87.5!3d45.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8803b7c0b0b0b0b0%3A0x0!2sDoor%20County%2C%20WI!5e0!3m2!1sen!2sus!4v1234567890"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Door County Service Area Map"
+                  className="rounded-lg"
+                ></iframe>
+              </div>
+              <p className="text-sm text-gray-600 mt-2 text-center">
+                Interactive map showing our Door County service area
+              </p>
+            </div>
           </div>
 
           {/* FAQ Section */}
@@ -158,10 +108,15 @@ export default function ContactPage() {
             </div>
           </div>
           <div className="mt-8 text-center">
-            <Button href="/contact-form" variant="secondary">
-              <Mail className="h-5 w-5 mr-2" />
-              Go to Contact Form
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button href="mailto:doorcountybouncyhouse@gmail.com" variant="default">
+                <Mail className="h-5 w-5 mr-2" />
+                Email Us
+              </Button>
+              <Button href="tel:+19203332178" variant="secondary">
+                Call (920) 333-2178
+              </Button>
+            </div>
           </div>
 
           <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg mt-8">

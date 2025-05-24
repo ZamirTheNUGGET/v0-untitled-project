@@ -29,7 +29,7 @@ export default function ContactForm() {
       </div>
       <div className="space-y-2">
         <label htmlFor="email" className="text-sm font-medium text-gray-700">
-          Email
+          Your Email
         </label>
         <input
           id="email"
@@ -40,7 +40,7 @@ export default function ContactForm() {
       </div>
       <div className="space-y-2">
         <label htmlFor="phone" className="text-sm font-medium text-gray-700">
-          Phone Number
+          Your Phone Number
         </label>
         <input
           id="phone"
@@ -62,7 +62,7 @@ export default function ContactForm() {
             className="w-full pl-10 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
           />
         </div>
-        <p className="text-sm text-gray-500 mt-1">Note: We operate from June through the end of August</p>
+      
       </div>
       <div className="space-y-2">
         <label htmlFor="event-type" className="text-sm font-medium text-gray-700">

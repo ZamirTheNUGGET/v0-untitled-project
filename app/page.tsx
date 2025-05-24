@@ -268,7 +268,12 @@ export default function Home() {
                 <div className="space-y-4">
                   <div className="flex items-center gap-2">
                     <Phone className="h-5 w-5 text-white" />
-                    <span className="text-lg text-white wave-text">(920) 333-2178</span>
+                    <a
+                      href="tel:+19203332178"
+                      className="text-lg text-white wave-text hover:text-yellow-300 transition-colors"
+                    >
+                      (920) 333-2178
+                    </a>
                   </div>
                   <div className="flex items-center gap-2">
                     <MapPin className="h-5 w-5 text-white" />
